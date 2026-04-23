@@ -1,0 +1,7 @@
+.col {
+  display: inline-block;
+  vertical-align: top;
+  width: 48%;
+  box-sizing: border-box;
+}
+/* TODO: Adjust margins, widths, and box model rules to create a stable two-column layout */

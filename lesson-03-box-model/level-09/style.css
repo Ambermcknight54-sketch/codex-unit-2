@@ -1,0 +1,13 @@
+/* Broken challenge: students must diagnose and fix without step-by-step hints */
+.container {
+  width: 320px;
+  border: 1px solid #ccc;
+  padding: 8px;
+}
+.item {
+  display: inline-block;
+  width: 160px;
+  padding: 12px;
+  border: 2px solid #444;
+  margin: 8px;
+}

@@ -1,0 +1,6 @@
+/* Starter styles — students will add visualizations in later levels */
+.intro {
+  max-width: 600px;
+  margin: 2rem auto;
+  font-family: system-ui, sans-serif;
+}

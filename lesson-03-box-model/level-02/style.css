@@ -1,0 +1,6 @@
+/* Minimal starter styles — students should add distinct colors/borders */
+.box {
+  display: inline-block;
+  margin: 2rem;
+}
+/* TODO: add styles for .layer-content, .layer-padding, .layer-border, .layer-margin */

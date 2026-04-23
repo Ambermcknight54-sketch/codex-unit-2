@@ -22,8 +22,16 @@ Explain the four box model layers (content, padding, border, margin) and their s
 
 ### More information
 
-- Box model affects element width/height calculations.
-- Browsers apply default styles that can change perceived spacing.
+The CSS box model defines four layers from inside → out: content, padding, border, and margin.
+
+- Content: area where text and images appear.
+- Padding: space inside the border between content and border.
+- Border: the line drawn around padding and content.
+- Margin: outer space that separates this element from others (vertical margins can collapse).
+
+Tip: `box-sizing` controls whether padding and border are included in an element's declared width; many projects use `border-box` for simpler sizing.
+
+Further reading and illustrations: https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model
 
 ### Usage tips
 

@@ -20,7 +20,9 @@ Independently diagnose and fix spacing/overflow issues in a small mockup using b
 
 ### More information
 
-- The unguided challenge evaluates reasoning and minimal, robust fixes.
+For this challenge, focus on minimal, robust fixes: prefer changing `box-sizing` or reducing widths slightly before making many layout changes. Use DevTools to inspect computed widths and margins and verify no horizontal overflow remains.
+
+Further reading: https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model
 
 ### Example
 

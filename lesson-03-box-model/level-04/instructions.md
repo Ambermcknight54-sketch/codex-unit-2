@@ -20,7 +20,11 @@ Explore common user-agent defaults (e.g., margins on `h1`, `p`) and how to overr
 
 ### More information
 
-- CSS resets normalize default spacing across browsers.
+Browsers apply default (user-agent) styles such as margins on headings and paragraphs. A reset or targeted override removes or changes those defaults. Example resets: `h1, p { margin: 0; }` or a small rule `h1 { margin-top: 0; }` to reduce unexpected spacing.
+
+DevTools shows the user-agent stylesheet under computed styles.
+
+Further reading: https://developer.mozilla.org/en-US/docs/Web/CSS/initial
 
 ### Usage tips
 

@@ -20,7 +20,9 @@ Compare `box-sizing: content-box` vs `box-sizing: border-box` and apply the prop
 
 ### More information
 
-- Many projects adopt `*, *::before, *::after { box-sizing: border-box }`.
+`box-sizing` controls whether padding and border are included in an element's declared width. `border-box` includes padding and border inside the width, which makes responsive sizing simpler. Many projects use `*, *::before, *::after { box-sizing: border-box }` for predictability.
+
+Further reading: https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing
 
 ### Usage tips
 

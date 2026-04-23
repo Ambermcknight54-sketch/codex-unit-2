@@ -20,7 +20,9 @@ Use width, margin, `inline-block` (or floats) to compose a simple 2-column layou
 
 ### More information
 
-- Consider small gutters using margins or gap patterns.
+When creating multi-column layouts, ensure the sum of column widths, paddings, borders, and margins fits the container. Use `box-sizing: border-box` so declared widths include padding and borders. Small gutters between columns are typically implemented with margins or a `gap` value in layout systems.
+
+Further reading: https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Columns
 
 ### Usage tips
 

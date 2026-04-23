@@ -21,7 +21,16 @@ Build a minimal page that visually highlights content, padding, border, and marg
 
 ### More information
 
-- Devtools' box model inspector shows these layers and computed values.
+The box model layers are visualized with backgrounds, borders, padding, and margin. To show each layer:
+
+- Use a background color on the innermost element for the content area.
+- Apply padding and a different background or subtle outline to show the padding region.
+- Use a visible border to represent the border layer.
+- Leave space outside the border (or use a transparent element) to indicate margin.
+
+DevTools' box model inspector also shows computed values for each layer.
+
+Further reading: https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model
 
 ### Usage tips
 

@@ -21,7 +21,11 @@ Change padding, border, and margin values to observe layout shifts and spacing e
 
 ### More information
 
-- Computed styles in devtools show numeric values for padding/border/margin.
+Padding increases the inside space between content and border; border adds visible thickness around padding; margin creates outer spacing between elements. Use DevTools to view computed padding, border, and margin values.
+
+Tip: change one property at a time (padding, then border, then margin) to observe how each affects layout.
+
+Further reading: https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model
 
 ### Usage tips
 

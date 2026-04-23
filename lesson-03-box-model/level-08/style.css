@@ -1,0 +1,13 @@
+/* Guided practice — smaller steps and a hint path for students */
+.container {
+  width: 320px;
+  border: 1px solid #ccc;
+  padding: 8px;
+}
+.item {
+  display: inline-block;
+  width: 140px;
+  padding: 12px;
+  border: 2px solid #444;
+  margin: 8px;
+}

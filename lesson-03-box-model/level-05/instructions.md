@@ -20,7 +20,15 @@ Compare `display` types (`inline`, `block`, `inline-block`) and demonstrate how 
 
 ### More information
 
-- Changing `display` can affect semantics and accessibility; prefer semantic tags when possible.
+Display types determine how elements participate in layout:
+
+- `block`: takes full available width, accepts width/height, starts on a new line.
+- `inline`: flows within text, ignores width/height, accepts horizontal padding/margin.
+- `inline-block`: flows inline but accepts width/height and vertical padding.
+
+Use semantic elements (e.g., `button`, `nav`) when appropriate; changing `display` doesn't change semantics for assistive tech.
+
+Further reading: https://developer.mozilla.org/en-US/docs/Web/CSS/display
 
 ### Usage tips
 

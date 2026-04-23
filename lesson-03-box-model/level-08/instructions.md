@@ -20,7 +20,9 @@ Work through a guided mockup that includes hints to fix spacing/overflow issues 
 
 ### More information
 
-- Guided hints help build confidence before attempting the unguided challenge.
+To stop overflow, compute an element's rendered width as: content + left/right padding + left/right border + left/right margin (unless using `border-box`, which includes padding and border). Use DevTools to inspect computed sizes and adjust one property at a time.
+
+Further reading: https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model
 
 ### Usage tips
 
