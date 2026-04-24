@@ -7,7 +7,30 @@
   </head>
   <body>
     <h1>Level 02 — Name & Email Inputs</h1>
-    <form>
+    <form action="/submit-handler" method="POST">
+      <div>
+        <label for="user-name">Full Name</label>
+        <input
+          type="text"
+          id="user-name"
+          name="name"
+          autocomplete="name"
+          placeholder="Jane Doe"
+          required />
+      </div>
+
+      <div>
+        <label for="user-email">Email Address</label>
+        <input
+          type="email"
+          id="user-email"
+          name="email"
+          autocomplete="email"
+          placeholder="jane@example.com"
+          required />
+      </div>
+
+      <button type="submit">Submit</button>
       <!-- TODO: Add an input for the user's name -->
       <!-- TODO: Add an input for the user's email using type="email" -->
     </form>
