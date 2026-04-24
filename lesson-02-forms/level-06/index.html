@@ -8,6 +8,39 @@
   <body>
     <h1>Level 06 — Radios & Checkboxes</h1>
     <form>
+      <form action="/submit-preferences" method="POST">
+      
+      <fieldset>
+        <legend>Preferred Contact Method</legend>
+        <div class="input-group">
+          <input type="radio" id="contact-email" name="contact_pref" value="email" checked />
+          <label for="contact-email">Email</label>
+        </div>
+        <div class="input-group">
+          <input type="radio" id="contact-phone" name="contact_pref" value="phone" />
+          <label for="contact-phone">Phone</label>
+        </div>
+        <div class="input-group">
+          <input type="radio" id="contact-mail" name="contact_pref" value="mail" />
+          <label for="contact-mail">Snail Mail</label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Interests</legend>
+        <div class="input-group">
+          <input type="checkbox" id="interest-tech" name="interests" value="technology" />
+          <label for="interest-tech">Technology</label>
+        </div>
+        <div class="input-group">
+          <input type="checkbox" id="interest-design" name="interests" value="design" />
+          <label for="interest-design">Design</label>
+        </div>
+        <div class="input-group">
+          <input type="checkbox" id="interest-business" name="interests" value="business" />
+          <label for="interest-business">Business</label>
+        </div>
+      </fieldset>
       <!-- TODO: Add radio inputs that share a name attribute -->
       <!-- TODO: Add one or more checkbox inputs -->
     </form>
