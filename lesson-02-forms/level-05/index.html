@@ -8,26 +8,46 @@
   <body>
     <h1>Level 05 — Select, Optgroup & Options</h1>
     <form>
-     <form action="/submit-selection" method="POST">
-      <div class="form-group">
-        <label for="device-choice">Select your preferred device</label>
-        <select id="device-choice" name="device" required>
-          <option value="" disabled selected>-- Please choose an option --</option>
-          
-          <optgroup label="Mobile Devices">
-            <option value="iphone">iPhone</option>
-            <option value="android">Android Phone</option>
-          </optgroup>
-          
-          <optgroup label="Desktop/Laptop">
-            <option value="macbook">MacBook</option>
-            <option value="windows-pc">Windows PC</option>
-            <option value="linux-laptop">Linux Laptop</option>
-          </optgroup>
-        </select>
-      </div>
 
-      <button type="submit">Submit Choice</button>
+     <form action="/submit-selection" method="POST">
+      <fieldset>
+    <legend>Preferred Contact Method</legend>
+    
+    <label>
+      <input type="radio" name="contact_pref" value="email" checked />
+      Email
+    </label>
+    
+    <label>
+      <input type="radio" name="contact_pref" value="phone" />
+      Phone
+    </label>
+    
+    <label>
+      <input type="radio" name="contact_pref" value="mail" />
+      Snail Mail
+    </label>
+  </fieldset>
+
+  <fieldset>
+    <legend>Interests</legend>
+    
+    <label>
+      <input type="checkbox" name="interests" value="technology" />
+      Technology
+    </label>
+    
+    <label>
+      <input type="checkbox" name="interests" value="design" />
+      Design
+    </label>
+    
+    <label>
+      <input type="checkbox" name="interests" value="business" />
+      Business
+    </label>
+  </fieldset>
+     <button type="submit">Submit Choice</button>
       <!-- TODO: Add a select with options and at least one optgroup -->
     </form>
   </body>
