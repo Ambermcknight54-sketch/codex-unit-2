@@ -1,0 +1,75 @@
+{
+  "slug": "lesson-01-semantic-tags",
+  "title": "Semantic HTML",
+  "date": "2026-04-17",
+  "topicTags": ["html", "semantic", "accessibility"],
+  "prereqs": ["basic-html"],
+  "total_estimated_minutes": 60,
+  "max_levels": 10,
+  "scope_updates": [
+    "headings",
+    "landmarks",
+    "structural-elements",
+    "lists",
+    "text-semantics",
+    "alt-text",
+    "semantic-vs-nonsemantic"
+  ],
+  "hint_policy": {
+    "tiers": 3,
+    "reveal_solution_on_pass": false,
+    "allow_code_snippets_in_hints": false
+  },
+  "levels": [
+    {
+      "id": "lesson-01-level-01",
+      "title": "Boilerplate & Document Structure",
+      "test_path": "../../tests/lesson-01-level-01.test.ts"
+    },
+    {
+      "id": "lesson-01-level-02",
+      "title": "Headings & Outline",
+      "test_path": "../../tests/lesson-01-level-02.test.ts"
+    },
+    {
+      "id": "lesson-01-level-03",
+      "title": "Landmark Elements",
+      "test_path": "../../tests/lesson-01-level-03.test.ts"
+    },
+    {
+      "id": "lesson-01-level-04",
+      "title": "Lists",
+      "test_path": "../../tests/lesson-01-level-04.test.ts"
+    },
+    {
+      "id": "lesson-01-level-05",
+      "title": "Sections & Articles",
+      "test_path": "../../tests/lesson-01-level-05.test.ts"
+    },
+    {
+      "id": "lesson-01-level-06",
+      "title": "Images & Alt Text",
+      "test_path": "../../tests/lesson-01-level-06.test.ts"
+    },
+    {
+      "id": "lesson-01-level-07",
+      "title": "Inline code and preformatted text",
+      "test_path": "../../tests/lesson-01-level-07.test.ts"
+    },
+    {
+      "id": "lesson-01-level-08",
+      "title": "Details & Summary",
+      "test_path": "../../tests/lesson-01-level-08.test.ts"
+    },
+    {
+      "id": "lesson-01-level-09",
+      "title": "From div to Semantic Elements",
+      "test_path": "../../tests/lesson-01-level-09.test.ts"
+    },
+    {
+      "id": "lesson-01-level-10",
+      "title": "Build a Semantic Page",
+      "test_path": "../../tests/lesson-01-level-10.test.ts"
+    }
+  ]
+}

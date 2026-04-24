@@ -1,0 +1,24 @@
+{
+  "slug": "lesson-02-forms",
+  "title": "Lesson 02 — HTML Forms",
+  "path": "lessons/lesson-02-forms",
+  "student_path": "../lesson-02-forms",
+  "lesson_plan_yaml": "lessons/lesson-02-forms/lesson-plan.yaml",
+  "lesson_plan_md": "lessons/lesson-02-forms/lesson-plan.md",
+  "date": "2026-04-19",
+  "topicTags": ["html", "forms", "accessibility"],
+  "tests_runtime_limit_ms": 500,
+  "test_paths": [
+    ".engine/tests/lesson-02-level-01.test.ts",
+    ".engine/tests/lesson-02-level-02.test.ts",
+    ".engine/tests/lesson-02-level-03.test.ts",
+    ".engine/tests/lesson-02-level-04.test.ts",
+    ".engine/tests/lesson-02-level-05.test.ts",
+    ".engine/tests/lesson-02-level-06.test.ts",
+    ".engine/tests/lesson-02-level-07.test.ts",
+    ".engine/tests/lesson-02-level-08.test.ts",
+    ".engine/tests/lesson-02-level-09.test.ts",
+    ".engine/tests/lesson-02-level-10.test.ts",
+    ".engine/tests/lesson-02-level-11.test.ts"
+  ]
+}

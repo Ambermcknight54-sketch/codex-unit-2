@@ -1,0 +1,20 @@
+{
+  "title": "JavaScript Objects",
+  "slug": "lesson-04-js-objects",
+  "unit": "codex-unit-2",
+  "test_path": [
+    "codex-unit-2/.engine/tests/lesson-04-level-01-description.test.ts",
+    "codex-unit-2/.engine/tests/lesson-04-level-01-examples.test.ts",
+    "codex-unit-2/.engine/tests/lesson-04-level-02-explanation.test.ts",
+    "codex-unit-2/.engine/tests/lesson-04-level-02-examples.test.ts",
+    "codex-unit-2/.engine/tests/lesson-04-level-03-object.test.ts",
+    "codex-unit-2/.engine/tests/lesson-04-level-04-declare.test.ts",
+    "codex-unit-2/.engine/tests/lesson-04-level-05-access.test.ts",
+    "codex-unit-2/.engine/tests/lesson-04-level-06-add.test.ts",
+    "codex-unit-2/.engine/tests/lesson-04-level-07-update.test.ts",
+    "codex-unit-2/.engine/tests/lesson-04-level-08-nested.test.ts",
+    "codex-unit-2/.engine/tests/lesson-04-level-09-methods.test.ts",
+    "codex-unit-2/.engine/tests/lesson-04-level-10-debug.test.ts",
+    "codex-unit-2/.engine/tests/lesson-04-level-11-challenge.test.ts"
+  ]
+}

@@ -1,0 +1,91 @@
+title: "Lesson 02 — HTML Forms"
+slug: lesson-02-forms
+topicTags:
+  - html
+  - forms
+  - inputs
+  - accessibility
+total_estimated_minutes: 55
+max_levels: 11
+concepts:
+  - forms.structure
+  - forms.inputs
+  - forms.labels
+  - forms.validation
+levels:
+  - id: level-01
+    title: "Intro & Boilerplate"
+    brief: "Add a basic <form> containing at least one <input> and a submit <button>; include TODO placeholders."
+    estimated_minutes: 5
+    tests_required: true
+    test_path: .engine/tests/lesson-02-level-01.test.ts
+
+  - id: level-02
+    title: "Name & Email Inputs"
+    brief: "Add name and email input controls; defer full labeling until Level 7."
+    estimated_minutes: 5
+    tests_required: true
+    test_path: .engine/tests/lesson-02-level-02.test.ts
+
+  - id: level-03
+    title: "Message Field & Submit"
+    brief: "Add a textarea for message content and a submit control."
+    estimated_minutes: 5
+    tests_required: true
+    test_path: .engine/tests/lesson-02-level-03.test.ts
+
+  - id: level-04
+    title: "Input Types"
+    brief: "Use appropriate input types: email, tel, password, number, range, file."
+    estimated_minutes: 6
+    tests_required: true
+    test_path: .engine/tests/lesson-02-level-04.test.ts
+
+  - id: level-05
+    title: "Select, Optgroup & Options"
+    brief: "Add a select element with options and at least one optgroup."
+    estimated_minutes: 5
+    tests_required: true
+    test_path: .engine/tests/lesson-02-level-05.test.ts
+
+  - id: level-06
+    title: "Radios & Checkboxes"
+    brief: "Implement radio groups and checkboxes with correct name grouping."
+    estimated_minutes: 5
+    tests_required: true
+    test_path: .engine/tests/lesson-02-level-06.test.ts
+
+  - id: level-07
+    title: "Labels & Accessibility"
+    brief: "Attach labels to controls; demonstrate implicit labeling (input nested in label) and explicit labeling using for paired with an input id."
+    estimated_minutes: 6
+    tests_required: true
+    test_path: .engine/tests/lesson-02-level-07.test.ts
+
+  - id: level-08
+    title: "Grouping Controls"
+    brief: "Use fieldset and legend to group related controls semantically."
+    estimated_minutes: 4
+    tests_required: true
+    test_path: .engine/tests/lesson-02-level-08.test.ts
+
+  - id: level-09
+    title: "Basic Validation"
+    brief: "Apply basic validation attributes: required, minlength, maxlength, and for range inputs, min/max."
+    estimated_minutes: 6
+    tests_required: true
+    test_path: .engine/tests/lesson-02-level-09.test.ts
+
+  - id: level-10
+    title: "Debugging & Fixing Common Mistakes"
+    brief: "Identify and fix common form mistakes in provided snippets (missing for/id, wrong input type, div used instead of semantic tag, missing submit)."
+    estimated_minutes: 6
+    tests_required: true
+    test_path: .engine/tests/lesson-02-level-10.test.ts
+
+  - id: level-11
+    title: "Integrate & Polish"
+    brief: "Combine all pieces, confirm accessibility, and run integration checks."
+    estimated_minutes: 2
+    tests_required: true
+    test_path: .engine/tests/lesson-02-level-11.test.ts

@@ -1,0 +1,182 @@
+title: "Semantic HTML"
+date: "2026-04-17"
+topicTags:
+  - html
+  - semantic
+  - accessibility
+prereqs:
+  - basic-html
+total_estimated_minutes: 60
+max_levels: 10
+scope_updates:
+  - headings
+  - landmarks
+  - structural-elements
+  - lists
+  - text-semantics
+  - alt-text
+  - semantic-vs-nonsemantic
+tests_runtime_limit_ms: 500
+hint_policy:
+  tiers: 3
+  reveal_solution_on_pass: false
+  allow_code_snippets_in_hints: false
+concepts:
+  - name: "Semantic boilerplate"
+    key: "boilerplate"
+    complexity: 1
+    estimated_minutes: 8
+    prereqs: []
+    assessed: false
+  - name: "Headings"
+    key: "headings"
+    complexity: 1
+    estimated_minutes: 8
+    prereqs: ["boilerplate"]
+    assessed: true
+  - name: "Landmark elements"
+    key: "landmarks"
+    complexity: 2
+    estimated_minutes: 10
+    prereqs: ["headings"]
+    assessed: true
+  - name: "Lists & grouping"
+    key: "lists"
+    complexity: 2
+    estimated_minutes: 8
+    prereqs: ["headings"]
+    assessed: true
+  - name: "Section & Article grouping"
+    key: "grouping"
+    complexity: 2
+    estimated_minutes: 4
+    prereqs: ["headings"]
+    assessed: true
+  - name: "Images & alt text"
+    key: "images"
+    complexity: 2
+    estimated_minutes: 8
+    prereqs: ["boilerplate"]
+    assessed: true
+  - name: "Text-level semantics (code, pre, details, summary)"
+    key: "text-semantics"
+    complexity: 2
+    estimated_minutes: 8
+    prereqs: ["headings"]
+    assessed: true
+  - name: "Semantic vs non-semantic"
+    key: "semantic-vs-nonsemantic"
+    complexity: 3
+    estimated_minutes: 10
+    prereqs: ["landmarks", "lists"]
+    assessed: true
+levels:
+  - id: "lesson-01-level-01"
+    title: "Boilerplate & Document Structure"
+    type: "guided"
+    objective: "Introduce the semantic HTML document skeleton and where content lives."
+    estimated_minutes: 8
+    difficulty: 1
+    allowed_concepts: ["boilerplate", "headings"]
+    test_path: ".engine/tests/lesson-01-level-01.test.ts"
+    hint_tier_allowed: 1
+    rubric: "pass: HTML contains <!doctype html>, html, head, body, and a title; partial: structure present but missing title."
+  - id: "lesson-01-level-02"
+    title: "Headings & Outline"
+    type: "guided"
+    objective: "Teach the semantic role of h1–h6 and building a clear document outline."
+    estimated_minutes: 8
+    difficulty: 1
+    allowed_concepts: ["headings"]
+    test_path: ".engine/tests/lesson-01-level-02.test.ts"
+    hint_tier_allowed: 2
+    rubric: "pass: page has one h1 and appropriate h2–h6 hierarchy; partial: headings exist but multiple h1s present."
+  - id: "lesson-01-level-03"
+    title: "Landmark Elements"
+    type: "guided"
+    objective: "Introduce header, nav, main, and footer as structural landmarks."
+    estimated_minutes: 10
+    difficulty: 2
+    allowed_concepts: ["landmarks", "headings"]
+    test_path: ".engine/tests/lesson-01-level-03.test.ts"
+    hint_tier_allowed: 2
+    rubric: "pass: header, nav, main, and footer elements present and contain appropriate headings/links; partial: some landmarks missing."
+  - id: "lesson-01-level-04"
+    title: "Lists"
+    type: "practice"
+    objective: "Use `ul`/`ol`/`li` for related items and proper list semantics."
+    estimated_minutes: 4
+    difficulty: 2
+    allowed_concepts: ["lists", "headings"]
+    test_path: ".engine/tests/lesson-01-level-04.test.ts"
+    hint_tier_allowed: 2
+    rubric: "pass: lists use ul/ol with li and contain meaningful headings when needed; partial: uses divs instead of list elements."
+  - id: "lesson-01-level-05"
+    title: "Sections & Articles"
+    type: "practice"
+    objective: "Group related content using `section` and `article` with appropriate headings."
+    estimated_minutes: 4
+    difficulty: 2
+    allowed_concepts: ["grouping", "headings"]
+    test_path: ".engine/tests/lesson-01-level-05.test.ts"
+    hint_tier_allowed: 2
+    rubric: "pass: content grouping uses section/article with headings; partial: grouping present but uses non-semantic containers."
+  - id: "lesson-01-level-06"
+    title: "Images & Alt Text"
+    type: "practice"
+    objective: "Teach correct use of img with alt and when to use figure/figcaption."
+    estimated_minutes: 6
+    difficulty: 2
+    allowed_concepts: ["images"]
+    test_path: ".engine/tests/lesson-01-level-06.test.ts"
+    hint_tier_allowed: 3
+    rubric: 'pass: images include meaningful alt attributes; decorative images marked with empty alt=""; figure + figcaption used for standalone images; partial: some alt attributes missing.'
+  - id: "lesson-01-level-07"
+    title: "Inline code and preformatted text"
+    type: "practice"
+    objective: "Show correct use of code for inline snippets and pre for preserved whitespace blocks."
+    estimated_minutes: 3
+    difficulty: 2
+    allowed_concepts: ["text-semantics"]
+    test_path: ".engine/tests/lesson-01-level-07.test.ts"
+    hint_tier_allowed: 2
+    rubric: "pass: inline code uses code and longer examples use pre; partial: uses div/span instead of semantic code tags."
+  - id: "lesson-01-level-08"
+    title: "Details & Summary"
+    type: "practice"
+    objective: "Introduce details and summary for optional or progressive disclosure content."
+    estimated_minutes: 3
+    difficulty: 2
+    allowed_concepts: ["text-semantics"]
+    test_path: ".engine/tests/lesson-01-level-08.test.ts"
+    hint_tier_allowed: 2
+    rubric: "pass: details used for non-essential content with descriptive summary; partial: summary missing or content essential."
+  - id: "lesson-01-level-09"
+    title: "From div to Semantic Elements"
+    type: "challenge"
+    objective: "Refactor a provided nonsemantic layout into semantic HTML while preserving meaning."
+    estimated_minutes: 8
+    difficulty: 3
+    allowed_concepts: ["semantic-vs-nonsemantic", "landmarks", "lists"]
+    test_path: ".engine/tests/lesson-01-level-09.test.ts"
+    hint_tier_allowed: 3
+    rubric: "pass: no top-level layout div used for structural roles; appropriate landmarks, headings, and lists present; partial: some divs remain."
+  - id: "lesson-01-level-10"
+    title: "Build a Semantic Page"
+    type: "challenge"
+    objective: "Create a short, accessible page using semantic elements learned across earlier levels."
+    estimated_minutes: 6
+    difficulty: 3
+    allowed_concepts:
+      [
+        "boilerplate",
+        "headings",
+        "landmarks",
+        "lists",
+        "images",
+        "semantic-vs-nonsemantic",
+        "text-semantics",
+      ]
+    test_path: ".engine/tests/lesson-01-level-10.test.ts"
+    hint_tier_allowed: 3
+    rubric: "pass: page includes header+nav+main+footer, one h1, sections with lists, images with alt, and uses figure where appropriate; partial: minor structural issues."

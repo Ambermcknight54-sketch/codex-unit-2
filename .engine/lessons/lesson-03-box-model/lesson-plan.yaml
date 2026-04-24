@@ -1,0 +1,96 @@
+title: "CSS Box Model"
+slug: "lesson-03-box-model"
+topicTags:
+  - css
+  - html
+  - layout
+total_estimated_minutes: 60
+max_levels: 15
+concepts:
+  - box model fundamentals
+  - content / padding / border / margin
+  - visualizing box model with HTML/CSS
+  - default (user-agent) styles and their effects
+  - inline vs block flow
+  - box-sizing and layout implications
+
+levels:
+  - id: lesson-03-level-01
+    title: "Intro to the Box Model"
+    brief: "Explain the four box model layers (content, padding, border, margin) and their stacking order."
+    estimated_minutes: 8
+    difficulty: 1
+    type: guided
+    tests_required: false
+
+  - id: lesson-03-level-02
+    title: "Visualize with HTML/CSS"
+    brief: "Build a minimal page that visually highlights content, padding, border, and margin using distinct colors and borders."
+    estimated_minutes: 10
+    difficulty: 2
+    type: guided
+    tests_required: true
+    test_path: "../../tests/lesson-03-level-02.test.ts"
+
+  - id: lesson-03-level-03
+    title: "Padding / Border / Margin Deep Dive"
+    brief: "Adjust padding, border, and margin to observe layout shifts and spacing effects."
+    estimated_minutes: 8
+    difficulty: 2
+    type: practice
+    tests_required: true
+    test_path: "../../tests/lesson-03-level-03.test.ts"
+
+  - id: lesson-03-level-04
+    title: "Default Element Styles"
+    brief: "Explore common user-agent defaults (e.g., margins on h1, p) and how to override them."
+    estimated_minutes: 7
+    difficulty: 2
+    type: guided
+    tests_required: true
+    test_path: "../../tests/lesson-03-level-04.test.ts"
+
+  - id: lesson-03-level-05
+    title: "Inline vs Block Elements"
+    brief: "Compare display types (inline, block, inline-block) and how width/height/padding behave for each."
+    estimated_minutes: 8
+    difficulty: 2
+    type: guided
+    tests_required: true
+    test_path: "../../tests/lesson-03-level-05.test.ts"
+
+  - id: lesson-03-level-06
+    title: "Combining Layout Rules"
+    brief: "Compose a simple two-column layout using width, margin, and box-sizing while reasoning about the box model."
+    estimated_minutes: 7
+    difficulty: 3
+    type: practice
+    tests_required: true
+    test_path: "../../tests/lesson-03-level-06.test.ts"
+
+  - id: lesson-03-level-07
+    title: "Box-Sizing & Responsive Considerations"
+    brief: "Compare content-box vs border-box and apply border-box for predictable responsive sizing."
+    estimated_minutes: 7
+    difficulty: 3
+    type: practice
+    tests_required: true
+    test_path: "../../tests/lesson-03-level-07.test.ts"
+
+  - id: lesson-03-level-08
+    title: "Practice: Debug & Build (Guided)"
+    brief: "Guided practice: fix spacing/overflow issues step-by-step and compute total element width."
+    estimated_minutes: 3
+    difficulty: 3
+    type: practice
+    tests_required: true
+    test_path: "../../tests/lesson-03-level-08.test.ts"
+
+  - id: lesson-03-level-09
+    title: "Challenge: Debug & Build (Unguided)"
+    brief: "Unguided challenge: independently diagnose and fix spacing/overflow issues using box model knowledge."
+    estimated_minutes: 2
+    difficulty: 4
+    type: challenge
+    tests_required: true
+    test_path: "../../tests/lesson-03-level-09.test.ts"

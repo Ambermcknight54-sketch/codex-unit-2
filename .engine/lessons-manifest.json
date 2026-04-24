@@ -1,0 +1,37 @@
+{
+  "lessons": [
+    {
+      "slug": "lesson-04-js-objects",
+      "title": "JavaScript Objects",
+      "manifest": ".engine/lessons/lesson-04-js-objects/lesson-04-manifest.json"
+    }
+  ]
+}
+{
+  "version": "1.0",
+  "generated": "2026-04-17T00:00:00Z",
+  "lessons": [
+    {
+      "slug": "lesson-01-semantic-tags",
+      "title": "Semantic HTML",
+      "path": "lessons/lesson-01-semantic-tags",
+      "student_path": "../lesson-01-semantic-tags",
+      "lesson_plan_yaml": "lessons/lesson-01-semantic-tags/lesson-plan.yaml",
+      "lesson_plan_md": "lessons/lesson-01-semantic-tags/lesson-plan.md",
+      "date": "2026-04-17",
+      "topicTags": ["html", "semantic", "accessibility"],
+      "levels": 10
+    },
+    {
+      "slug": "lesson-02-forms",
+      "title": "HTML Forms",
+      "path": "lessons/lesson-02-forms",
+      "student_path": "../lesson-02-forms",
+      "lesson_plan_yaml": "lessons/lesson-02-forms/lesson-plan.yaml",
+      "lesson_plan_md": "lessons/lesson-02-forms/lesson-plan.md",
+      "date": "2026-04-19",
+      "topicTags": ["html", "forms", "accessibility"],
+      "levels": 11
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+title: "JavaScript Objects"
+slug: lesson-04-js-objects
+topicTags:
+  - javascript
+  - objects
+  - programming
+total_estimated_minutes: 60
+max_levels: 15
+concepts:
+  - object literals and declaration
+  - property access (dot notation)
+  - adding and updating properties
+  - methods assigned after function declaration
+  - debugging common object errors
+  - default ES module exports only (one default export per file)
+levels:
+  - id: level-01
+    title: Exporting Values (ES Modules)
+    brief: Default-export simple values so tests can import them.
+    estimated_minutes: 5
+    tests_required: true
+    test_path:
+      - codex-unit-2/.engine/tests/lesson-04-level-01-description.test.ts
+      - codex-unit-2/.engine/tests/lesson-04-level-01-examples.test.ts
+  - id: level-02
+    title: Intro - What Is an Object?
+    brief: Explain objects as key/value collections and contrast with primitives/arrays.
+    estimated_minutes: 6
+    tests_required: true
+    test_path:
+      - codex-unit-2/.engine/tests/lesson-04-level-02-explanation.test.ts
+      - codex-unit-2/.engine/tests/lesson-04-level-02-examples.test.ts
+  - id: level-03
+    title: Exporting Objects (default export)
+    brief: Declare a simple object and export it as the module default.
+    estimated_minutes: 4
+    tests_required: true
+    test_path:
+      - codex-unit-2/.engine/tests/lesson-04-level-03-object.test.ts
+  - id: level-04
+    title: Declaring Objects (Literals)
+    brief: Create objects using literal syntax and export the result.
+    estimated_minutes: 6
+    tests_required: true
+    test_path:
+      - codex-unit-2/.engine/tests/lesson-04-level-04-declare.test.ts
+  - id: level-05
+    title: Accessing Properties (Dot Notation)
+    brief: Read properties using dot notation and export examples.
+    estimated_minutes: 5
+    tests_required: true
+    test_path:
+      - codex-unit-2/.engine/tests/lesson-04-level-05-access.test.ts
+  - id: level-06
+    title: Adding Properties
+    brief: Demonstrate adding properties at runtime using dot notation.
+    estimated_minutes: 4
+    tests_required: true
+    test_path:
+      - codex-unit-2/.engine/tests/lesson-04-level-06-add.test.ts
+  - id: level-07
+    title: Updating Properties
+    brief: Update existing property values and discuss mutability.
+    estimated_minutes: 4
+    tests_required: true
+    test_path:
+      - codex-unit-2/.engine/tests/lesson-04-level-07-update.test.ts
+  - id: level-08
+    title: Nested Properties
+    brief: Work with nested objects and safe access patterns; export nested object.
+    estimated_minutes: 5
+    tests_required: true
+    test_path:
+      - codex-unit-2/.engine/tests/lesson-04-level-08-nested.test.ts
+  - id: level-09
+    title: Methods - Declare Functions Then Assign
+    brief: Declare named functions then assign them as object methods; export object.
+    estimated_minutes: 7
+    tests_required: true
+    test_path:
+      - codex-unit-2/.engine/tests/lesson-04-level-09-methods.test.ts
+  - id: level-10
+    title: Debugging Object Errors (Common Pitfalls)
+    brief: Diagnose/fix typos, undefined properties, and incorrect method assignment patterns.
+    estimated_minutes: 7
+    tests_required: true
+    test_path:
+      - codex-unit-2/.engine/tests/lesson-04-level-10-debug.test.ts
+  - id: level-11
+    title: Challenge - Build Objects from Descriptions
+    brief: Build objects from written specs; methods must be assigned from named functions.
+    estimated_minutes: 7
+    tests_required: true
+    test_path:
+      - codex-unit-2/.engine/tests/lesson-04-level-11-challenge.test.ts
