@@ -8,6 +8,39 @@
   <body>
     <h1>Level 04 — Input Types</h1>
     <form>
+     <form action="/submit" method="POST">
+      
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" autocomplete="email" required />
+      </div>
+
+      <div class="form-group">
+        <label for="tel">Phone</label>
+        <input type="tel" id="tel" name="tel" autocomplete="tel" />
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" autocomplete="new-password" required />
+      </div>
+
+      <div class="form-group">
+        <label for="age">Age (18-100)</label>
+        <input type="number" id="age" name="age" min="18" max="100" />
+      </div>
+
+      <div class="form-group">
+        <label for="rating">Rating (0-10)</label>
+        <input type="range" id="rating" name="rating" min="0" max="10" />
+      </div>
+
+      <div class="form-group">
+        <label for="avatar">Profile Photo</label>
+        <input type="file" id="avatar" name="avatar" accept="image/*" />
+      </div>
+
+      <button type="submit">Submit</button>
       <!-- TODO: Add inputs using types: email, tel, password, number, range, file -->
     </form>
   </body>
