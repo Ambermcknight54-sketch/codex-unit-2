@@ -5,6 +5,7 @@
   padding: 8px;
 }
 .item {
+  box-sizing: border-box; /* Add this to include padding and border in the width */
   display: inline-block;
   width: 140px;
   padding: 12px;
