@@ -5,7 +5,7 @@ const book = {
   author: "F. Scott Fitzgerald",
   pages: 180,
 };
-// 2. Define the named function for the method
+// 2. Define the function for the method
 function summary() {
   return this.title + " by " + this.author;
 }
