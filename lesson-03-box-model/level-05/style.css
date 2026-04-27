@@ -2,9 +2,12 @@
 .demo-inline {
   display: inline;
   background: #fee;
+  width: 150px;    /* This will be ignored while display is 'inline' */
+  padding: 20px;   /* Vertical padding might overlap other text! */
+}
 }
 .demo-block {
-  display: block;
+  display: inline;
   background: #eef;
-  width: 200px;
+  width: 220px;
 }
