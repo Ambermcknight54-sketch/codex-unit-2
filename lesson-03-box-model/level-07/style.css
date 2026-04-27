@@ -3,4 +3,20 @@
   width: 200px;
   padding: 20px;
   border: 4px solid #333;
+  box-sizing: border-box;
+}
+
+.col {
+  box-sizing: border-box;
+}
+
+#box-a {
+  box-sizing: content-box;
+  background-color: #ffcccc; /* Light red */
+}
+
+/* Box B uses 'border-box' */
+#box-b {
+  box-sizing: border-box;
+  background-color: #ccffcc; /* Light green */
 }
