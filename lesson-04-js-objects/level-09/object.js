@@ -5,7 +5,7 @@
 // user.greet = greet
 // export default user
 const user = {
-  'Ava'
+  "Ava"
 };
 
 export default user;
@@ -16,7 +16,7 @@ function greet(name) {
 
 // 2. Create the object
 const user = {
-  name: 'Ava'
+  name: "Ava"
 };
 
 // 3. Attach the function as a method
