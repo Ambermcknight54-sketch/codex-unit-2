@@ -2,7 +2,7 @@
 // Example: export default { theme: { color: 'blue' } }
 export default {
   student: {
-    name: 'Ava',
+    name: "Ava",
     grade: 10
   /* TODO: nested structure */
 };
