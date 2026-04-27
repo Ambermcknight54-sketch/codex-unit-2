@@ -11,13 +11,30 @@
       <h1>Visualize the Box Model</h1>
       <!-- TODO: Add the elements below and style them to show each layer clearly -->
       <div class="box" aria-label="box-model-demo">
+        <p>
+          per intructions explained in detail below.
+        </p>
         <div class="layer-margin">
-          <!-- margin layer hint -->
+          <p>What it is: The outermost layer of invisible space.
+              Role: Margin sits outside the border. It creates separation between your element and other elements on the page. 
+              It is always transparent and is the primary tool for pushing other items away. </p> 
+            -- margin layer hint -->
           <div class="layer-border">
+            <p>
+              What it is: The line that wraps around the padding and content.
+              Role: This is the physical boundary of the element. You can style it with width, color, and different styles
+            </p>
             <!-- border layer hint -->
             <div class="layer-padding">
-              <!-- padding layer hint -->
+              <!<p> The transparent space immediately surrounding the content.
+              Role: Padding is inside the border. It acts as "breathing room," 
+              pushing the edge of the border away from the content. If you give a box a background color, that color will extend into the padding area.</p>
+                -- padding layer hint -->
               <div class="layer-content">Content</div>
+              <p>
+               The innermost box where your actual "payload" lives—this is where your text, images, or child elements appear.
+               This defines the base size of your element before any spacing is added. 
+              </p>
             </div>
           </div>
         </div>

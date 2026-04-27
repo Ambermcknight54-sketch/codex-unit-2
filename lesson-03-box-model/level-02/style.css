@@ -4,3 +4,27 @@
   margin: 2rem;
 }
 /* TODO: add styles for .layer-content, .layer-padding, .layer-border, .layer-margin */
+/* 1. Margin: Outer space */
+.layer-margin {
+  margin: 20px;
+  background-color: #fce4d6; /* Light Orange */
+  padding: 20px;
+}
+
+/* 2. Border: The defined edge */
+.layer-border {
+  border: 10px solid #c55a11; /* Dark Orange */
+  padding: 20px;
+}
+
+/* 3. Padding: Internal breathing room */
+.layer-padding {
+  background-color: #ffe699; /* Yellow */
+  padding: 30px;
+}
+
+/* 4. Content: The inner text area */
+.layer-content {
+  background-color: #9dc3e6; /* Light Blue */
+  padding: 10px;
+}
