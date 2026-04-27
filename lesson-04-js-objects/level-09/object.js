@@ -5,6 +5,22 @@
 // user.greet = greet
 // export default user
 const user = {
-  /* TODO: add name */
+  'Ava'
 };
+
+export default user;
+// 1. Declare the named function
+function greet(name) {
+  return 'Hi ' + name;
+}
+
+// 2. Create the object
+const user = {
+  name: 'Ava'
+};
+
+// 3. Attach the function as a method
+user.greet = greet;
+
+// 4. Export the object
 export default user;
