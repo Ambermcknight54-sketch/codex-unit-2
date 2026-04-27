@@ -6,3 +6,12 @@
 const obj = {};
 // TODO: add properties using dot notation
 export default obj;
+// add.js
+const obj = {};
+
+// Adding properties using dot notation
+obj.name = 'Ava';
+obj.age = 10;
+
+// Exporting the updated object
+export default obj;
