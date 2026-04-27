@@ -10,7 +10,7 @@ export default obj;
 const obj = {};
 
 // Adding properties using dot notation
-obj.name = 'Ava';
+obj.name = "Ava";
 obj.age = 10;
 
 // Exporting the updated object
