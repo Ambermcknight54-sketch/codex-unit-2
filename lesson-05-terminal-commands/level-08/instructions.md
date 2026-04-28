@@ -27,6 +27,6 @@ Clear the terminal screen using `clear` or `Ctrl+L` and explain when that's usef
 
 ### Example
 
-```js
-// export default ["ls","cd folder","node script.js"]
-```
+````js
+clea```
+````
