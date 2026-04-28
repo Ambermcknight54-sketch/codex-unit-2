@@ -1,6 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { JSDOM } from "jsdom";
+import { expect } from "vitest";
 
 type LessonSlug = `lesson-${number}-${string}`;
 
@@ -39,4 +40,25 @@ export function loadDocument(levelNumber: number, lessonSlug: LessonSlug) {
   const html = fs.readFileSync(file, "utf8");
   const dom = new JSDOM(html);
   return dom.window.document;
+}
+
+// Reusable test helpers
+export function expectNonEmptyString(value: unknown) {
+  expect(typeof value).toBe("string");
+  expect(String(value).trim().length).toBeGreaterThan(0);
+}
+
+export function expectArray(value: unknown) {
+  expect(Array.isArray(value)).toBeTruthy();
+}
+
+export function expectArrayIncludesToken(value: unknown, token: RegExp) {
+  expect(Array.isArray(value)).toBeTruthy();
+  const arr = (value as any[]).map(String);
+  expect(arr.some((s) => token.test(s))).toBeTruthy();
+}
+
+export function expectStringIncludesToken(value: unknown, token: RegExp) {
+  expect(typeof value).toBe("string");
+  expect(token.test(String(value))).toBeTruthy();
 }

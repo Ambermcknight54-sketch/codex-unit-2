@@ -1,41 +1,33 @@
 import { describe, it, expect } from "vitest";
 import answer from "../lesson-05-terminal-commands/level-10/answer.js";
+import { expectArray, expectArrayIncludesToken } from "./_test-utils";
 
 describe("lesson-05 — level-10 challenge steps array", () => {
   it("exports an array of steps", () => {
-    expect(Array.isArray(answer)).toBeTruthy();
+    expectArray(answer);
   });
+
   it("includes a node run step (e.g., 'node ./folder/script.js')", () => {
-    const steps = answer.map(String);
-    expect(steps.some((s) => /\bnode\b/i.test(s))).toBeTruthy();
+    expectArrayIncludesToken(answer, /\bnode\b/i);
   });
 
   it("includes a terminal clear step (e.g., 'clear' or 'ctrl+l')", () => {
-    const steps = answer.map(String);
-    expect(
-      steps.some((s) => /\bclear\b|ctrl\+l|control\+l/i.test(s)),
-    ).toBeTruthy();
+    expectArrayIncludesToken(answer, /\bclear\b|ctrl\+l|control\+l/i);
   });
 
   it("includes a step that returns to the original folder (e.g., 'cd ..' or 'cd -')", () => {
-    const steps = answer.map(String);
-    expect(
-      steps.some((s) => /(\bcd\s+(\.|\.|-|back))|\bcd\s+\.\./i.test(s)),
-    ).toBeTruthy();
+    expectArrayIncludesToken(answer, /(\bcd\s+(\.|\.|-|back))|\bcd\s+\.\./i);
   });
 
   it("includes a VS Code explorer step mentioning 'added file'", () => {
-    const steps = answer.map(String);
-    expect(steps.some((s) => /added file/i.test(s))).toBeTruthy();
+    expectArrayIncludesToken(answer, /added file/i);
   });
 
   it("includes a VS Code explorer step mentioning 'created folder'", () => {
-    const steps = answer.map(String);
-    expect(steps.some((s) => /created folder/i.test(s))).toBeTruthy();
+    expectArrayIncludesToken(answer, /created folder/i);
   });
 
   it("includes a VS Code explorer step mentioning 'moved file'", () => {
-    const steps = answer.map(String);
-    expect(steps.some((s) => /moved file|moved/i.test(s))).toBeTruthy();
+    expectArrayIncludesToken(answer, /moved file|moved/i);
   });
 });
