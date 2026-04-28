@@ -1,5 +1,5 @@
 import { describe, it } from 'vitest'
-import updated from '../../lesson-04-js-objects/level-07/update.js'
+import updated from '../lesson-04-js-objects/level-07/update.js'
 
 describe('lesson-04 — level-07 update properties', () => {
   it('exports an object', () => {

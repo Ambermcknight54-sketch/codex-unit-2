@@ -11,7 +11,7 @@ Combine `ls`, `cd`, relative paths, and `node` to find and run a script in a sub
 ### Complete these tasks
 
 - Open the terminal, run `ls` to find a folder, `cd` into it, and run `node script.js`.
-- Create `answer.js` that exports an object `{ steps: [ ... ] }` listing the commands you used.
+- Create `answer.js` that exports an array listing the commands you used.
 
 ### Hints
 
@@ -28,5 +28,5 @@ Combine `ls`, `cd`, relative paths, and `node` to find and run a script in a sub
 ### Example
 
 ```js
-// export default { steps: ["ls","cd folder","node script.js"] }
+// export default ["ls","cd folder","node script.js"];
 ```

@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import studentObj from "../../lesson-04-js-objects/level-09/object.js";
+import studentObj from "../lesson-04-js-objects/level-09/object.js";
 
 describe("lesson-04 — level-09 methods assigned after declaration", () => {
   it("exports an object", () => {

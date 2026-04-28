@@ -12,7 +12,7 @@ Use the VS Code file explorer to create or move files, then run the script with 
 
 - Create a new folder in the VS Code explorer and move a script into it using the UI.
 - In the terminal run `node ./folder/script.js`, then clear the terminal and `cd` back.
-- Export an object in `answer.js`: `{ steps: [...], notes?: "..." }` and include a note that mentions VS Code.
+- With `answer.js`, export an array with the VS Code steps and terminal commands you used.
 
 ### Hints
 
@@ -20,14 +20,8 @@ Use the VS Code file explorer to create or move files, then run the script with 
 
 ### More information
 
-- The test checks that `steps` includes `node` and `notes` mentions VS Code.
+- The test checks that array includes commands and VS Code steps like `node` and `added file`.
 
 ### Usage tips
 
 - Use short step strings like `node ./folder/script.js` so tests can match them.
-
-### Example
-
-```js
-// export default { steps: ["node ./folder/script.js"], notes: "moved file using VS Code" }
-```

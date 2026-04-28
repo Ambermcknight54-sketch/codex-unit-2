@@ -24,9 +24,3 @@ Clear the terminal screen using `clear` or `Ctrl+L` and explain when that's usef
 ### Usage tips
 
 - Clear before running a long script so you can see only the new output.
-
-### Example
-
-```js
-// export default ["ls","cd folder","node script.js"]
-```

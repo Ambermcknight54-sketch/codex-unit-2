@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import fixes from "../../lesson-04-js-objects/level-10/fixes.js";
+import fixes from "../lesson-04-js-objects/level-10/fixes.js";
 
 describe("lesson-04 — level-10 debugging fixes", () => {
   it("exports an object", () => {

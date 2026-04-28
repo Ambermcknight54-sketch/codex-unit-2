@@ -22,7 +22,7 @@ Configure Visual Studio Code to use Git Bash as the integrated terminal on Windo
 
 ### More information
 
-- Git Bash is a bash shell packaged with Git for Windows. It supports `ls`, `cd`, `./`, and other familiar commands.
+- Git Bash is a bash shell packaged with Git for Windows. It supports `ls`, `cd`, `node`, and other familiar commands.
 - Further reading: https://git-scm.com/download/win
 
 ### Usage tips

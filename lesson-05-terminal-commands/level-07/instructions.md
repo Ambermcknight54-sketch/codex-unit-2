@@ -25,9 +25,3 @@ Use the Up/Down arrow keys and `Ctrl+R` to find past commands and rerun them.
 ### Usage tips
 
 - Use history to avoid retyping long commands.
-
-### Example
-
-```js
-// export default "used up/down to recall commands"
-```

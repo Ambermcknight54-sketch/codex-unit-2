@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import nested from "../../lesson-04-js-objects/level-08/nested.js";
+import nested from "../lesson-04-js-objects/level-08/nested.js";
 
 describe("lesson-04 — level-08 nested properties", () => {
   it("exports an object", () => {

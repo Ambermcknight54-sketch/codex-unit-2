@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import challenge from "../../lesson-04-js-objects/level-11/object.js";
+import challenge from "../lesson-04-js-objects/level-11/object.js";
 
 describe("lesson-04 — level-11 challenge", () => {
   it("exports an object", () => {

@@ -15,7 +15,7 @@ Use `cd` to move into subfolders and back to parent folders.
 
 ### Hints
 
-- `cd ..` always moves one level up.
+- `cd` is not case sensitive.
 
 ### More information
 

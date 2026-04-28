@@ -16,7 +16,7 @@ Use `ls` to list files and folders in the current directory.
 
 ### Hints
 
-- Try `ls -a` to see hidden files if needed.
+- Folders appear in a diferent color and end with `/`.
 
 ### More information
 

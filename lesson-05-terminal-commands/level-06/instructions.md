@@ -24,9 +24,3 @@ Run a JavaScript file with the `node` command and observe the output.
 ### Usage tips
 
 - If `node` isn't found, ensure Node.js is installed and on your PATH.
-
-### Example
-
-```js
-// export default ["node", "hello.js"]
-```
