@@ -1,33 +1,30 @@
 // Level 12 — Debug function declarations and calls
 // TODO: Fix five broken function declarations and their corresponding calls.
 
-function sayHi { 
-  return "hi"; 
+function sayHi() {
+  return "hi";
 }
+sayHi();
 
-sayHi[];
-
-function add(a b) { 
-  return a + b; 
+function add(a, b) {
+  return a + b;
 }
-
-add(5);
+add(5, 10);
 
 function getName() {
-  "Name"
-};
-
-getNname();
-
-function multiply(x, y) 
-  return x * y;
-
-multiply 2,3);
-
-function (name) { 
-  return `Hello ${name}`; 
+  return "Name";
 }
+getName();
 
-greetPerson("Ava"));
+function multiply(x, y) {
+  return x * y;
+}
+multiply(2, 3);
 
-export default greeet;
+function greetPerson(name) {
+  return `Hello ${name}`;
+}
+greetPerson("Ava");
+
+// Export one of the repaired functions as the default
+export default sayHi;
