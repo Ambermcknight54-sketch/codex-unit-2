@@ -1,5 +1,21 @@
 // Level 08 — Nested object access and extraction
 // TODO: Given a nested object, assign 5 depth-1 and 5 depth-2 properties to descriptive variables.
+// Depth-1 properties
+const orderId = order.id;
+const orderStatus = order.status;
+const orderDate = order.placedAt;
+const isGiftOrder = order.isGift;
+const shippingType = order.shippingMethod;
+
+// Depth-2 (and deeper) properties
+const customerName = order.customer.name;
+const customerEmail = order.customer.contact.email;
+const customerCity = order.customer.address.city;
+const orderSubtotal = order.totals.subtotal;
+const orderTotal = order.totals.total;
+
+// Export one of the variables as the default
+export default customerName;
 
 const order = {
   id: 1023,
