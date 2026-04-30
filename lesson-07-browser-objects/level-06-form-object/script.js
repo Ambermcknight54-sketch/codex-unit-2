@@ -11,3 +11,15 @@
 //   console.log('enctype:', form.enctype);
 //   console.log('className:', form.className);
 // }
+const form = document.getElementById("sample-form");
+
+// 2. Log the required metadata properties
+if (form) {
+  console.log("ID:", form.id);
+  console.log("Name:", form.name);
+  console.log("Elements Count:", form.elements.length);
+  console.log("Method:", form.method);
+  console.log("Action:", form.action);
+  console.log("Encoding Type:", form.enctype);
+  console.log("Class Name:", form.className);
+}
