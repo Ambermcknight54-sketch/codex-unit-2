@@ -5,7 +5,7 @@ export default {
     name: "Ava",
     grade: 10,
   },
-  // This closes the 'student' object
-  // This closes the main object
-  /* TODO: nested structure */
 };
+// This closes the 'student' object
+// This closes the main object
+/* TODO: nested structure */
