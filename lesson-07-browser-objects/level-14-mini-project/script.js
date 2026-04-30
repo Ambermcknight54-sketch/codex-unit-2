@@ -6,8 +6,6 @@ function handleSubmit(event) {
   // const form = event.target;
   // TODO: read name, message, volume, selected radio, checkbox
   // TODO: validate required fields, display summary, then form.reset();
-  console.log("mini-project scaffold");
-}
 
 // const form = document.getElementById('sample-form');
 // if (form) form.onsubmit = handleSubmit;

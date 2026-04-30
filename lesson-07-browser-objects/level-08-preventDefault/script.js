@@ -12,17 +12,19 @@ function handleSubmit(event) {
 // Attach scaffold:
 // const form = document.getElementById('sample-form');
 // if (form) form.onsubmit = handleSubmit;
-function handleSubmit(event) {
-  // 1. Stop the browser from reloading the page
+preventDefault;
+function handleSubmit;{
+  // 1. ALWAYS call this first to "freeze" the page state
   event.preventDefault();
 
-  // 2. Log the explanation as required by the task
+  // 2. Now it is safe to run your custom logic
+  console.log("Success: preventDefault was called first.");
   console.log(
-    "event.preventDefault() is used to stop the default form submission (page reload) so we can handle the data with JavaScript.",
+    "Logic: This stops the browser from refreshing, allowing us to stay on the page.",
   );
 }
 
-// 3. Attach the handler to the form
+// Attach the handler to the form
 const form = document.getElementById("sample-form");
 if (form) {
   form.onsubmit = handleSubmit;
