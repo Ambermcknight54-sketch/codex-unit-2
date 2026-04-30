@@ -3,6 +3,9 @@
 export default {
   student: {
     name: "Ava",
-    grade: 10
+    grade: 10,
+  },
+  // This closes the 'student' object
+  // This closes the main object
   /* TODO: nested structure */
 };
