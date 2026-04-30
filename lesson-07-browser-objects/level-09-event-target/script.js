@@ -4,7 +4,7 @@
 const formElement = document.querySelector('#sample-form');
 
 // 2. Define the handler function
-function handleSubmit(event) {
+function handleSubmit() {
   // 3. Stop the page from refreshing
   event.preventDefault();
 
