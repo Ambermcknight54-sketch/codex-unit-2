@@ -1,3 +1,3 @@
 // Level 09 — Practice: Navigate and run
 // TODO: Export a string array of commands.
-export default [];
+export default ["ls", "cd folder", "node script.js"];
