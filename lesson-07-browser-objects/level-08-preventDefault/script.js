@@ -12,3 +12,18 @@ function handleSubmit(event) {
 // Attach scaffold:
 // const form = document.getElementById('sample-form');
 // if (form) form.onsubmit = handleSubmit;
+function handleSubmit(event) {
+  // 1. Stop the browser from reloading the page
+  event.preventDefault();
+
+  // 2. Log the explanation as required by the task
+  console.log(
+    "event.preventDefault() is used to stop the default form submission (page reload) so we can handle the data with JavaScript.",
+  );
+}
+
+// 3. Attach the handler to the form
+const form = document.getElementById("sample-form");
+if (form) {
+  form.onsubmit = handleSubmit;
+}
