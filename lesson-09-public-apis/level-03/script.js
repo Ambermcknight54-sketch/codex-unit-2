@@ -1,10 +1,9 @@
-const btn3 = document.getElementById("fetch-btn");
-const errorEl3 = document.getElementById("error");
+const formTag = document.getElementById("loginForm");
+formTag.onsubmit = handleSubmit;
 
-if (btn3) {
-  btn3.addEventListener("click", async () => {
-    // TODO: wrap fetch in try/catch
-    // TODO: check response.ok and show friendly messages
-    console.log("level-03 fetch placeholder");
-  });
+async function handleSubmit(event) {
+  event.preventDefault();
+  // TODO: Wrap fetch code in try/catch
+  // TODO: In try: send request, parse `result`, update `successEl` and call formTag.reset()
+  // TODO: In catch: console.error(error) and update `errorEl.innerText`
 }

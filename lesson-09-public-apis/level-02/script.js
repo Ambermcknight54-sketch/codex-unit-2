@@ -1,12 +1,11 @@
-const form2 = document.getElementById("login-form");
-const errorEl2 = document.getElementById("error");
-const successEl2 = document.getElementById("success");
+const formTag = document.getElementById("loginForm");
+formTag.onsubmit = handleSubmit;
 
-if (form2) {
-  form2.addEventListener("submit", async (e) => {
-    // TODO: prevent default, call fetch/login flow
-    // TODO: update errorEl2 or successEl2 depending on response
-    // On success, call form.reset() per the tasks
-    console.log("level-02 submit placeholder");
-  });
+function handleSubmit(event) {
+  event.preventDefault();
+  // TODO: Build `data` object from `form.elements` (username, password)
+  // TODO: Use async/await and fetch to POST to https://dummyjson.com/auth/login
+  // TODO: Include headers: { 'Content-Type': 'application/json' }
+  // TODO: Parse response into `result` and update `errorEl.innerText` or `successEl.innerText`
+  // TODO: On success, call form.reset()
 }

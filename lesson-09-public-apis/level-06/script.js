@@ -1,8 +1,9 @@
-const questionEl6 = document.getElementById("question");
-const choicesEl6 = document.getElementById("choices");
-const feedbackEl6 = document.getElementById("feedback");
+const formTag = document.getElementById("queryForm");
+formTag.onsubmit = handleSubmit;
 
-// TODO: fetch a question, extract correct & incorrect answers, shuffle them
-// TODO: render choices as accessible buttons and wire click handlers
-// TODO: show feedback on selection and provide retry/next controls
-console.log("level-06 scaffold");
+async function handleSubmit(event) {
+  event.preventDefault();
+  // TODO: Fetch trivia questions with async/await
+  // TODO: Save first question to `question` and separate choices into variables
+  // TODO: Render question and choices into DOM
+}

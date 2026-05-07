@@ -1,11 +1,9 @@
-const triviaForm = document.getElementById("trivia-form");
-const questionEl = document.getElementById("question");
+const formTag = document.getElementById("queryForm");
+formTag.onsubmit = handleSubmit;
 
-if (triviaForm) {
-  triviaForm.addEventListener("submit", async (e) => {
-    // TODO: preventDefault, build query params with URLSearchParams
-    // TODO: fetch trivia API with async/await then parse JSON
-    // TODO: render result[0].question.text into the page
-    console.log("level-05 placeholder");
-  });
+async function handleSubmit(event) {
+  event.preventDefault();
+  // TODO: Build data object from formTag.elements and convert with URLSearchParams
+  // TODO: Use async/await with fetch to call https://the-trivia-api.com/v2/questions
+  // TODO: Parse `result` and display result[0].question.text into the DOM
 }
