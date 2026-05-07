@@ -3,9 +3,20 @@
 const form = document.getElementById("sample-form");
 const result = document.getElementById("result");
 
-function handleSubmit(event) {
-  event.preventDefault();
-  // TODO: set result.innerText to a short explanation about fetch
+async function handleSubmit(event) {
+  event.preventDefault(); // Prevents the form from refreshing the page
+
+  try {
+    const response = await fetch(
+      "https://jsonplaceholder.typicode.com/posts/1",
+    );
+    const data = await response.json();
+
+    // Update result with the data retrieved
+    result.innerText = `Success! Fetched title: "${data.title}"`;
+  } catch (error) {
+    result.innerText = "There was an error fetching the data.";
+  }
 }
 
 if (form) form.onsubmit = handleSubmit;
