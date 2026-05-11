@@ -8,14 +8,22 @@
   </head>
   <body>
     <form id="sample-form">
+      <p>Pick a color:</p>
       <label><input type="radio" name="color" value="red" /> Red</label>
+      <label><input type="radio" name="color" value="blue" /> Blue</label>
       <label><input type="radio" name="color" value="green" /> Green</label>
-      <label><input type="checkbox" name="subscribe" /> Subscribe</label>
+
+      <hr />
+
+      <label>
+        <input type="checkbox" name="subscribe" />
+        Subscribe to newsletter?
+      </label>
+
+      <br /><br />
       <button type="submit">Submit</button>
     </form>
-    <p>
-      Choose a radio option and toggle the checkbox. Use `form.elements` in
-      `script.js` to read their values and states.
-    </p>
+
+    <p id="display-area"></p>
   </body>
 </html>
