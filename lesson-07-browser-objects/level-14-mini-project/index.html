@@ -8,21 +8,26 @@
   </head>
   <body>
     <form id="sample-form">
-      <label>Name<input name="name" type="text" required /></label>
-      <label>Message<textarea name="message"></textarea></label>
-      <label>Volume<input name="volume" type="range" min="0" max="10" /></label>
-      <label><input type="radio" name="color" value="red" /> Red</label>
-      <label><input type="radio" name="color" value="blue" /> Blue</label>
-      <label><input type="checkbox" name="subscribe" /> Subscribe</label>
-      <button type="submit">Submit</button>
+      <input name="name" type="text" placeholder="Your Name" required /><br />
+
+      <textarea name="message" placeholder="Your Message"></textarea><br />
+
+      <label>Volume: <input name="volume" type="range" /></label><br />
+
+      <fieldset>
+        <legend>Theme Color:</legend>
+        <label><input type="radio" name="color" value="Light" /> Light</label>
+        <label><input type="radio" name="color" value="Dark" /> Dark</label>
+      </fieldset>
+
+      <label><input type="checkbox" name="subscribe" /> Get updates</label
+      ><br />
+
+      <button type="submit">Send Data</button>
     </form>
-    <div id="summary">
-      Summary will appear here after successful submission.
-    </div>
-    <p>
-      Build a handler that prevents default navigation, reads named inputs via
-      `form.elements`, validates fields, displays the summary above, and calls
-      `form.reset()` on success.
-    </p>
+
+    <div
+      id="summary"
+      style="margin-top: 20px; padding: 10px; border: 1px solid #ccc"></div>
   </body>
 </html>
