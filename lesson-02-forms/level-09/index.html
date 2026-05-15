@@ -8,6 +8,24 @@
   <body>
     <h1>Level 09 — Basic Validation</h1>
     <form>
+      <label for="username">Username:</label>
+      <input
+        type="text"
+        id="username"
+        name="username"
+        required
+        minlength="3"
+        maxlength="15" />
+
+      <br />
+
+      <label for="age">Age (18-99):</label>
+      <input type="number" id="age" name="age" min="18" max="99" required />
+
+      <br />
+
+      <button type="submit">Submit</button>
+
       <!-- TODO: Add required attributes and minlength/maxlength where appropriate -->
       <!-- TODO: If using a range input, include min and max -->
     </form>

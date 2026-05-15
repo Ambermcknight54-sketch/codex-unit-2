@@ -8,6 +8,46 @@
   <body>
     <h1>Level 05 — Select, Optgroup & Options</h1>
     <form>
+
+     <form action="/submit-selection" method="POST">
+      <fieldset>
+    <legend>Preferred Contact Method</legend>
+    
+    <label>
+      <input type="radio" name="contact_pref" value="email" checked />
+      Email
+    </label>
+    
+    <label>
+      <input type="radio" name="contact_pref" value="phone" />
+      Phone
+    </label>
+    
+    <label>
+      <input type="radio" name="contact_pref" value="mail" />
+      Snail Mail
+    </label>
+  </fieldset>
+
+  <fieldset>
+    <legend>Interests</legend>
+    
+    <label>
+      <input type="checkbox" name="interests" value="technology" />
+      Technology
+    </label>
+    
+    <label>
+      <input type="checkbox" name="interests" value="design" />
+      Design
+    </label>
+    
+    <label>
+      <input type="checkbox" name="interests" value="business" />
+      Business
+    </label>
+  </fieldset>
+     <button type="submit">Submit Choice</button>
       <!-- TODO: Add a select with options and at least one optgroup -->
     </form>
   </body>

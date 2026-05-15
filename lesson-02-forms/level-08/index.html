@@ -8,7 +8,34 @@
   <body>
     <h1>Level 08 — Grouping Controls</h1>
     <form>
-      <!-- TODO: Group related controls using <fieldset> and describe the group with <legend> -->
+      <fieldset>
+        <legend>Personal Information</legend>
+        
+        <label for="first-name">First Name
+          <input type="text" id="first-name" name="first_name" required>
+        </label>
+        
+        <label for="last-name">Last Name
+          <input type="text" id="last-name" name="last_name" required>
+        </label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Notification Preferences</legend>
+        
+        <label>
+          <input type="checkbox" name="email_updates" value="true">
+          Receive email updates
+        </label>
+        
+        <label>
+          <input type="checkbox" name="sms_updates" value="true">
+          Receive SMS alerts
+        </label>
+      </fieldset>
+
+      <button type="submit">Save Profile</button>
+   !-- TODO: Group related controls using <fieldset> and describe the group with <legend> -->
     </form>
   </body>
 </html>

@@ -12,6 +12,23 @@ async function handleSubmit(e) {
   // const data = { username: form.elements['username'].value, email: form.elements['email'].value };
   // const response = await fetch('https://api.jsoning.com/mock/public/users', { method: 'POST', body: data });
   // result.innerText = 'Posted — inspect response in console or check for errors.';
+
+  // 1. Collect values using form.elements
+  const data = {
+    username: form.elements["username"].value,
+    email: form.elements["email"].value,
+  };
+
+  // 2. Perform POST request with the raw object
+  // NOTE: This will likely fail or send [object Object] because the body
+  // expects a string, FormData, or URLSearchParams.
+  const response = await fetch("https://api.jsoning.com/mock/public/users", {
+    method: "POST",
+    body: data,
+  });
+
+  result.innerText =
+    "Posted — inspect response in console or check for errors.";
 }
 
 if (form) form.onsubmit = handleSubmit;
