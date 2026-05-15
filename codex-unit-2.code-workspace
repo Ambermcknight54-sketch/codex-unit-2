@@ -3,6 +3,9 @@
     {
       "path": ".",
     },
+    {
+      "path": "../../Badge Interview",
+    },
   ],
   "settings": {},
   "launch": {
@@ -16,4 +19,3 @@
     ],
   },
 }
-
