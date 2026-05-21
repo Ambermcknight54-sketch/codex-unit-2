@@ -19,7 +19,7 @@ fetch("https://api.genderize.idsonplaceholder.typicode.com/posts", {
     });
 
     // Check if the server responded with a successful status code (like 201 Created)
-    if (!response.ok) {
+    if (response.ok) {
       throw new Error(`HTTP error! Status: ${response.status}`);
     }
 
