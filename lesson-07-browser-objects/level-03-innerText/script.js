@@ -2,3 +2,8 @@
 // Example starter:
 // const element = document.getElementById('desc');
 // console.log('before:', element.innerText);
+const element = document.getElementById("desc");
+console.log("before:", element.innerText);
+element.innerText =
+  "This node content was safely modified using the innerText property";
+debugger;
