@@ -4,10 +4,10 @@
 
 // Buggy starter (anonymous function assigned):
 const user = { name: "Ava" };
-user.say = ???;
-
-export default user;
-
-function () {
+// 1. Declare the function with a specific name
+function sayHello() {
   return "hello " + user.name;
-};
+}
+// 2. Attach the named function to the object method property
+user.say = sayHello;
+export default user;
