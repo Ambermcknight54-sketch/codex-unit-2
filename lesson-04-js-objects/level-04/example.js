@@ -2,4 +2,8 @@
 // Example: export default { a: 1, b: "x" };
 export default {
   /* TODO: add keys and values */
+  id: 101,
+  username: "eveHolt",
+  role: "admin",
+  isActive: true,
 };
