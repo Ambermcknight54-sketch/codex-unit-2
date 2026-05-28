@@ -3,3 +3,9 @@
   background: #eef;
 }
 /* TODO: change padding/border/margin values to see layout effects */
+body {
+  font-family: sans-serif;
+  line-height: 1.5;
+  padding: 20px;
+  background-color: #fafafa;
+}
