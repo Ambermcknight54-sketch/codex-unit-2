@@ -1,24 +1,20 @@
-const form4 = document.getElementById("search-form");
-const out4 = document.getElementById("out");
+const formTag = document.getElementById("queryForm");
+formTag.onsubmit = eventHandler;
 
-if (form4) {
-  form4.addEventListener("submit", (e) => {
-    // TODO: preventDefault, build a data object, use URLSearchParams
-    // TODO: append query string to GET request URL
-    // 1. Collect form data
-    const formData = new FormData(e.target);
+formTag.onsubmit = function (event) {
+  event.preventDefault();
 
-    // 2. Create URLSearchParams from the form data
-    // This automatically serializes inputs based on their 'name' attributes
-    const params = new URLSearchParams(formData);
+  const form = event.target;
 
-    // 3. Construct the full URL
-    // We append the params as a query string to our endpoint
-    const baseUrl = "https://api.example.com/search";
-    const fullUrl = `${baseUrl}?${params.toString()}`;
+  // 1. Read values from form elements
+  const category = form.elements.category.value;
+  const difficulty = form.elements.difficulty.value;
+  const data = { category, difficulty };
 
-    // 4. Display the result in the <pre> tag and log it
-    out4.textContent = `Generated URL:\n${fullUrl}`;
-    console.log("Generated URL:", fullUrl);
-  });
-}
+  // 3. Use URLSearchParams to convert data into a safely encoded query string
+  const params = new URLSearchParams(data);
+  const query = params.toString();
+
+  // 4. Log the query string output
+  console.log("Generated query string:", query);
+};
