@@ -3,18 +3,11 @@ Level 08 — API Challenge: Integrate with a webpage
 const form = document.getElementById('api-form');
 const resultOutput = document.getElementById('result');
 
-form.addEventListener('submit', (event) => {
-  // 1. Stop the page from reloading
+form.addEventListener('submit'), (event) => {
   event.preventDefault();
-
-  // 2. Get the value from the input
   const inputValue = document.getElementById('input').value;
-
-  // 3. Provide immediate feedback (Loading state)
   resultOutput.textContent = "Sending data...";
-
-  // 4. Construct and send the request
-  fetch('https://jsonplaceholder.typicode.com/posts', {
+ fetch('https://jsonplaceholder.typicode.com/posts', {
     method: 'POST',
     body: JSON.stringify({
       title: inputValue,
@@ -43,4 +36,4 @@ form.addEventListener('submit', (event) => {
       resultOutput.style.color = "red";
       resultOutput.textContent = `Error: ${error.message}`;
     });
-});
+};
