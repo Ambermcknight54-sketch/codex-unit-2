@@ -4,3 +4,21 @@
   margin: 2rem;
 }
 /* TODO: add styles for .layer-content, .layer-padding, .layer-border, .layer-margin */
+.layer-margin {
+  background-color: #f8cbad; 
+  padding: 20px;           
+
+.layer-border {
+  border: 5px solid #ff0000; 
+  background-color: #fff2cc; 
+}
+
+.layer-padding {
+  padding: 30px;             
+}
+
+.layer-content {
+  background-color: #deeaf6; 
+  padding: 10px;
+  text-align: center;
+}

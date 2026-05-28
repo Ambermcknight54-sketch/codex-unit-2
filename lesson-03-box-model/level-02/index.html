@@ -3,25 +3,43 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Level 02 — Visualize with HTML/CSS</title>
+    <title>Level 01 — Intro to the Box Model</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <main>
-      <h1>Visualize the Box Model</h1>
-      <!-- TODO: Add the elements below and style them to show each layer clearly -->
-      <div class="box" aria-label="box-model-demo">
+    <main class="intro">
+      <h1>Intro to the Box Model</h1>
+      <p>
+        Read the instructions for this level in
+        <strong>instructions.md</strong>.
+      </p>
+
+      <section>
+        <h2>Your notes</h2>
+        <p>
+          Every HTML element is treated as a rectangular box consisting of four
+          layers. The <strong>content</strong> layer holds the actual text or
+          images. Surrounding that is the <strong>padding</strong>, which clears
+          space directly around the content. Next is the
+          <strong>border</strong>, wrapping around both the padding and content.
+          Finally, the <strong>margin</strong> is the outermost layer that
+          creates empty space between this element and its neighbors.
+        </p>
+      </section>
+
+      <section>
+        <h2>Box Model Visualization</h2>
+
         <div class="layer-margin">
-          <!-- margin layer hint -->
           <div class="layer-border">
-            <!-- border layer hint -->
             <div class="layer-padding">
-              <!-- padding layer hint -->
-              <div class="layer-content">Content</div>
+              <div class="layer-content">
+                <p>Content Area</p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </section>
     </main>
   </body>
 </html>
