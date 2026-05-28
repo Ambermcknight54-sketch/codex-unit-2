@@ -14,22 +14,10 @@ function handleSubmit(event) {
 
   console.log("Form Data:", { message, volume, typeOfVolume: typeof volume });
 }
-
-
 const form = document.getElementById('sample-form');
 if (form) {
   form.onsubmit = handleSubmit;
 }
-  // const form = event.target;
-  // TODO: const message = form.elements.message.value;
-  // TODO: const volume = Number(form.elements.volume.value);
   console.log("textarea & range scaffold");
 }
 
-// const form = document.getElementById('sample-form');
-// function handleSubmit(event) {
-//   event.preventDefault();
-//   const message = form.elements.message.value;
-//   const volume = Number(form.elements.volume.value);
-//   console.log(message, volume);
-// }
