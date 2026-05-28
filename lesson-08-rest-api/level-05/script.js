@@ -4,6 +4,7 @@ const form = document.getElementById("sample-form");
 const pUsername = document.getElementById("username");
 const pEmail = document.getElementById("email");
 const pId = document.getElementById("id");
+form.onsubmit = handleSubmit;
 
 async function handleSubmit(e) {
   e.preventDefault();
@@ -27,5 +28,3 @@ async function handleSubmit(e) {
     console.error("Fetch error:", error);
   }
 }
-
-if (form) form.onsubmit = handleSubmit;
