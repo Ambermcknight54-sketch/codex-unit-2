@@ -4,7 +4,7 @@ const element = document.getElementById("content");
 console.log("before:", element.innerHTML);
 <output>
   <strong>innerHTML</strong>
-  <em>innerText</em>
+  element.innerHTML = "<strong>innerHTML</strong> text content updated.";
 </output>;
 
 debugger;
