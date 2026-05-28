@@ -2,13 +2,13 @@ const formTag = document.getElementById("queryForm");
 formTag.onsubmit = handleSubmit;
 
 if (triviaForm) {
-  triviaForm.addEventListener("submit", async (e) => {
+  triviaForm.addEventListener("submit", async (event) => {
     // Reset UI while loading
     questionEl.textContent = "Fetching question...";
 
     try {
       // 1. Build query params from the form (e.g., amount=1)
-      const formData = new FormData(e.target);
+      const formData = new FormData(event.target);
       const params = new URLSearchParams(formData);
 
       // 2. Fetch the data using the constructed query string
