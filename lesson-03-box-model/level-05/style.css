@@ -8,3 +8,34 @@
   background: #eef;
   width: 200px;
 }
+body {
+  font-family: sans-serif;
+  padding: 24px;
+  background-color: #fafafa;
+  line-height: 1.6;
+}
+
+/* LEVEL 05 TASK: Convert element and test dimension behaviors */
+.demo-inline {
+  display: inline-block;
+  width: 150px;
+  height: 50px;
+  padding: 10px;
+  background-color: #deeaf6;
+  border: 2px solid #1f4e78;
+  text-align: center;
+}
+
+.demo-block {
+  display: block;
+  margin-top: 16px;
+  padding: 10px;
+  background-color: #fce4d6;
+  border: 2px solid #c65911;
+}
+
+.observation-box {
+  margin-top: 32px;
+  border-top: 1px solid #dddddd;
+  padding-top: 16px;
+}

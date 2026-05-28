@@ -9,9 +9,22 @@
   <body>
     <main>
       <h1>Inline vs Block</h1>
+
       <span class="demo-inline">Inline element</span>
+
       <div class="demo-block">Block element</div>
-      <!-- TODO: Try `display: inline-block` and observe padding/width behavior -->
+
+      <section class="observation-box">
+        <h2>Display Layout Observations</h2>
+        <p>
+          <strong>Observations:</strong>
+          Changing the <code>span</code> to <code>inline-block</code> allows it
+          to stay on the same line as surrounding text while successfully
+          accepting our explicit width, height, and vertical padding values.
+          Purely <code>inline</code> elements ignore those vertical dimensions
+          completely.
+        </p>
+      </section>
     </main>
   </body>
 </html>
