@@ -5,13 +5,16 @@ const result = document.getElementById("result");
 form.onsubmit = handleSubmit;
 
 async function handleSubmit(event) {
-  event.preventDefault(); 
-  const response = await fetch(
+  event.preventDefault();
+
+  try {
+    const response = await fetch(
       "https://jsonplaceholder.typicode.com/posts/1",
     );
     const data = await response.json();
-    result.innerText = `Success! Fetched title: "(data.title)";
+
+    result.innerText = `Success! Fetched title: "${data.title}"`;
   } catch (error) {
     result.innerText = "There was an error fetching the data.";
   }
-  }
+}
