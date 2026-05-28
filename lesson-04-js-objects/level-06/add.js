@@ -5,6 +5,5 @@
 // export default obj;
 const obj = {};
 // TODO: add properties using dot notation
-obj.role = "admin";
-obj.isActive = true;
+obj.age = 30;
 export default obj;
