@@ -2,6 +2,7 @@
 // TODO: Await fetch and call response.json() to parse the body.
 const form = document.getElementById("sample-form");
 const result = document.getElementById("result");
+form.onsubmit = handleSubmit;
 
 async function handleSubmit(event) {
   event.preventDefault();
@@ -21,4 +22,4 @@ async function handleSubmit(event) {
   }
 }
 
-if (form) form.onsubmit = handleSubmit;
+form.onsubmit = handleSubmit;
