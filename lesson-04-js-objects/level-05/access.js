@@ -1,9 +1,9 @@
 // TODO: Demonstrate dot-notation property access and default-export the result/example.
 // Example: const user = { name: 'Ava' }; export default user.name;
-const targetUser = {
-  username: "eveHolt",
-  role: "admin",
+const user = {
+  name: "Ava",
+  role: "Developer",
+  level: 2,
 };
 
-const extractedUsername = targetUser.username;
-export default extractedUsername;
+export default user.name;
