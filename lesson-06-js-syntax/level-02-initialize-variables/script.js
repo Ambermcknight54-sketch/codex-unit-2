@@ -6,17 +6,19 @@
 // let totalCount = 10;
 
 // Add your lines below:
-let currentWorkspacePath = "/workspaces/codex-unit-2";
-let userAccountStatus = "active";
-let preferredDisplayTheme = "dark";
-let systemAlertMessage = "Success";
-let studentFullName = "Amber Mcknight";
+const currentWorkspacePath = "/workspaces/codex-unit-2";
+const userAccountStatus = "active";
+const preferredDisplayTheme = "dark";
+const systemAlertMessage = "Success";
+const studentFullName = "Amber Mcknight";
 
-let totalCount = 0; // Keeping your initial starter line
-let maximumLoginAttempts = 3;
-let activeSessionDuration = 120;
-let connectionPortNumber = 8080;
-let currentLessonLevel = 2;
-let totalCount = 0;
+const totalCount = 0; 
+const maximumLoginAttempts = 3;
+const activeSessionDuration = 120;
+const connectionPortNumber = 8080;
+const currentLessonLevel = 2;
+
+// Default-export one of the declared variables for unit test inspection
+export default studentFullName;= 0;
 // Default-export one of the declared variables for unit test inspection
 export default studentFullName;
