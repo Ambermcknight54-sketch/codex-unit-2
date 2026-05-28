@@ -11,11 +11,10 @@ const user = {
   },
 };
 const activeName = user.profile ? user.profile.username : "Guest";
+
+user.greet = greet;
 function greet() {
   return "Hello " + (user.profile ? user.profile.username : "Guest");
 }
-
-// Attach the named function to the object as a method
-user.greet = greet;
 
 export default user;
