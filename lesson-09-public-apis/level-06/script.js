@@ -1,52 +1,33 @@
-const questionEl6 = document.getElementById("question");
-const choicesEl6 = document.getElementById("choices");
-const feedbackEl6 = document.getElementById("feedback");
+const formTag = document.getElementById("queryForm");
 
-// TODO: fetch a question, extract correct & incorrect answers, shuffle them
-// TODO: render choices as accessible buttons and wire click handlers
-// TODO: show feedback on selection and provide retry/next controls
-async function fetchAndRender() {
-  // Clear previous state
-  questionEl6.textContent = "Loading...";
-  choicesEl6.innerHTML = "";
-  feedbackEl6.textContent = "";
+formTag.onsubmit = async function (event) {
+  event.preventDefault();
+
+  const questionHeading = document.getElementById("questionPrompt");
+  const displayA = document.getElementById("choiceA");
+  const displayB = document.getElementById("choiceB");
+  const displayC = document.getElementById("choiceC");
+  const displayD = document.getElementById("choiceD");
 
   try {
     const response = await fetch("https://the-trivia-api.com/v2/questions");
-    const data = await response.json();
-    const q = data;
+    const result = await response.json();
 
-    // 1. Process and shuffle answers
-    const allAnswers = [...q.incorrectAnswers, q.correctAnswer];
-    const shuffledAnswers = allAnswers.sort(() => Math.random() - 0.5);
+    // 1. Navigate nested properties to isolate the single item string parameters
+    const question = result.question.text;
+    const correct = result.correctAnswer;
+    const incorrect1 = result.incorrectAnswers;
+    const incorrect2 = result.incorrectAnswers;
+    const incorrect3 = result.incorrectAnswers;
 
-    // 2. Render the question
-    questionEl6.textContent = q.question.text;
-
-    // 3. Render choices as buttons
-    shuffledAnswers.forEach((answer) => {
-      const btn = document.createElement("button");
-      btn.textContent = answer;
-
-      btn.addEventListener("click", () => {
-        // Disable all buttons so user can't change answer
-        Array.from(choicesEl6.children).forEach((b) => (b.disabled = true));
-
-        // Check if correct
-        if (answer === q.correctAnswer) {
-          feedbackEl6.textContent = "Correct! 🎉";
-        } else {
-          feedbackEl6.textContent = `Incorrect! The answer was: ${q.correctAnswer}`;
-        }
-      });
-
-      choicesEl6.appendChild(btn);
-    });
-  } catch (err) {
-    questionEl6.textContent = "Failed to load question.";
-    console.error(err);
+    // 2. Render variables directly into structured DOM location tags safely
+    questionHeading.innerText = question;
+    displayA.innerText = `A) ${correct}`;
+    displayB.innerText = `B) ${incorrect1}`;
+    displayC.innerText = `C) ${incorrect2}`;
+    displayD.innerText = `D) ${incorrect3}`;
+  } catch (error) {
+    console.error("Trivia data extraction breakdown:", error);
+    questionHeading.innerText = "Failed to load trivia database questions.";
   }
-}
-
-// Start the game
-fetchAndRender();
+};
