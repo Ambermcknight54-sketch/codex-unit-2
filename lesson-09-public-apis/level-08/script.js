@@ -10,14 +10,8 @@ function handleSubmit(event) {
 
     try {
       // 1. Create data object using a quoted string for the hyphenated property key
-      const data = { "api-key": "a5d53839d41e43bfbcd50c96b2ee33d6"}
-
-        " };
-
-      // 2. Convert the object parameters safely into a query string
+      const data = { "api-key": "a5d53839d41e43bfbcd50c96b2ee33d6" };
       const queryParams = new URLSearchParams(data);
-
-      // 3. Request the random meme endpoint with the credentials appended
       const response = await fetch(
         `https://api.humorapi.com/memes/random?${queryParams}`,
       );
