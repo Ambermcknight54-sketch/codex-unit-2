@@ -3,5 +3,17 @@
 
 // Example:
 // let userNames = ["Ava", "Jon", "Maya"];
+let userNames = ["Ava", "Jon", "Maya"];
+let primaryColors = ["red", "blue", "yellow"];
+let targetFruits = ["apple", "banana", "cherry"];
+let weekDays = ["Monday", "Wednesday", "Friday"];
+let systemAlerts = ["success", "warning", "error"];
 
-let userNames = [];
+let gameScores = [10, 20, 30];
+let primeNumbers = [2, 3, 5];
+let connectionPorts = [80, 443, 8080];
+let releaseYears = [2024, 2025, 2026];
+let dailySteps = [5000, 7500, 10000];
+let userNames = [""];
+
+export default userNames;
