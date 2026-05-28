@@ -2,12 +2,20 @@
 // This starter intentionally assigns an anonymous function to an object property.
 // Your task: give the function a name, then attach the named function to the object.
 
-// Buggy starter (anonymous function assigned):
-const user = { name: "Ava" };
-// 1. Declare the function with a specific name
-function sayHello() {
-  return "hello " + user.name;
+const user = {
+  profile: {
+    username: "Ava",
+  },
+  preferences: {
+    theme: "dark",
+  },
+};
+const activeName = user.profile ? user.profile.username : "Guest";
+function greet() {
+  return "Hello " + (user.profile ? user.profile.username : "Guest");
 }
-// 2. Attach the named function to the object method property
-user.say = sayHello;
+
+// Attach the named function to the object as a method
+user.greet = greet;
+
 export default user;
