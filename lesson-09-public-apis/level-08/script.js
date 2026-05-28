@@ -5,9 +5,8 @@ function handleSubmit(event) {
   event.preventDefault();
   formTag.onsubmit = async function (event) {
     event.preventDefault();
-
     const memeImage = document.querySelector("img");
-
+  }
     try {
       // 1. Create data object using a quoted string for the hyphenated property key
       const data = { "api-key": "a5d53839d41e43bfbcd50c96b2ee33d6" };
