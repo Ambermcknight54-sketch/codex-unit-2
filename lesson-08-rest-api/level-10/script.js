@@ -6,10 +6,8 @@ const v2 = document.getElementById("v2");
 const v3 = document.getElementById("v3");
 form.onsubmit = handleSubmit;
 
-async function handleSubmit(e) {
-  e.preventDefault();
-  // TODO: collect data, POST to echo server, parse response, and insert values into v1/v2/v3
-  // 1. Collect data from form elements
+async function handleSubmit(event) {
+  event.preventDefault();
   const payload = {
     username: form.elements.value,
     email: form.elements.value,
