@@ -1,33 +1,38 @@
 const formTag = document.getElementById("loginForm");
+const errorDisplay = document.getElementById("error");
+const successDisplay = document.getElementById("success");
 formTag.onsubmit = handleSubmit;
 
-if (btn3) {
-  btn3.addEventListener("click", async () => {
-    // TODO: wrap fetch in try/catch
-    // TODO: check response.ok and show friendly messages
-    // Clear previous errors
-    errorEl3.textContent = "";
+async function handleSubmit(event) {
+  event.preventDefault();
+  
+  // Reset visibility states before making a new connection attempt
+  errorDisplay.innerText = "";
+  successDisplay.innerText = "";
+  
+  const form = event.target;
 
-    try {
-      // 1. Attempt the fetch
-      const response = await fetch("https://api.jsoning.com/mock/public/users");
-
-      // 2. Explicitly handle HTTP errors
-      if (!response.ok) {
-        throw new Error(
-          `HTTP Error: ${response.status} (${response.statusText})`,
-        );
-      }
-
-      // Success logic
-      console.log("Data fetched successfully!");
-    } catch (error) {
-      // 3. Handle both Network errors and thrown HTTP errors
-      if (error.message.includes("HTTP Error")) {
-        errorEl3.textContent = error.message;
-      } else {
-        errorEl3.textContent = "Network error: Please check your connection.";
-      }
+  try {
+    const response = await fetch("https://api.jsoning.com/mock/public/users");
+    
+    // Check if the response status returned a non-2xx failure code
+    if (!response.ok) {
+      throw new Error(`HTTP Error: ${response.status}`);
     }
-  });
-}
+    
+    const data = await response.json();
+    
+    // Render success feedback to the DOM and reset form fields cleanly
+    successDisplay.innerText = "Login successful!";
+    form.reset();
+    
+  } catch (error) {
+    // Distinguish technical debugging specs in console from safe user-facing text
+    console.error("Fetch operational failure context:", error);
+    
+    if (error.message.includes("HTTP Error")) {
+      errorDisplay.innerText = "Server error occurred. Please check submission criteria.";
+    } else {
+      errorDisplay.innerText = "Network failure. Please check your connection and try again.";
+    }
+  }
