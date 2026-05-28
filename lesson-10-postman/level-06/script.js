@@ -14,7 +14,6 @@ fetch("https://dog.ceo/api/breeds/image/random")
       "Fact: The Dog API returns a JSON object with 'message' (the URL) and 'status' keys.",
     );
 
-    // Optional: Log the specific image URL
     console.log("Random Dog Image URL:", data.message);
   })
   .catch((error) => console.error("Error fetching dog:", error));
