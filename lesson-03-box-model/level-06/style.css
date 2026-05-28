@@ -5,3 +5,35 @@
   box-sizing: border-box;
 }
 /* TODO: Adjust margins, widths, and box model rules to create a stable two-column layout */
+body {
+  font-family: sans-serif;
+  background-color: #fafafa;
+  margin: 0;
+  padding: 24px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+/* Container to prevent inline elements from expanding wildly */
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+/* LEVEL 06 TASK: Define a stable 2-column layout.
+  - box-sizing forces borders and padding inside the 48% width calculations.
+  - total width math per column: 1% (margin-left) + 48% (width) + 1% (margin-right) = 50%
+  - 50% * 2 columns = 100% total layout width, guaranteeing zero wrapping bugs.
+*/
+.col {
+  box-sizing: border-box;
+  display: inline-block;
+  vertical-align: top; /* Prevents alignment issues if columns have different content heights */
+  width: 48%;
+  margin: 1%;
+  padding: 20px;
+  border: 2px solid #333333;
+}
