@@ -3,5 +3,16 @@
 
 // Example:
 // let isLoggedIn = false;
-
+let isLoggedIn = false; // Keeping your initial starter line
+let hasVerifiedEmail = true;
+let canEditProfile = false;
+let shouldRefreshSession = true;
+let isThemeDark = true;
+let hasActiveSubscription = false;
+let canUploadFiles = true;
+let shouldShowNotifications = false;
+let isRegistrationComplete = true;
+let hasAdminPrivileges = false;
 let isLoggedIn = false;
+
+export default isLoggedIn;
