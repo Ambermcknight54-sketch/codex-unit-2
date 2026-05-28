@@ -4,3 +4,15 @@
 //   event.preventDefault();
 //   const form = event.target;
 // }
+const submissionForm = document.querySelector("#sampleForm");
+
+function handleSubmit(event) {
+  event.preventDefault();
+  const form = event.target;
+  console.log(
+    "event.target dynamically references the specific DOM element that dispatched the event, allowing direct node access inside execution blocks.",
+  );
+  debugger;
+}
+
+submissionForm.onsubmit = handleSubmit;
