@@ -8,60 +8,35 @@
   <body>
     <h1>Level 02 — Name & Email Inputs</h1>
 
-    <form action="/submit-handler" method="POST">
-      <label for="email"
-        >Email
-        <input
-          type="email"
-          id="email"
-          name="email"
-          autocomplete="email"
-          required />
-      </label>
+    <div class="work-area">
+      <h2>Begin completing Unit 2</h2>
+      <p>Learning how to use VS Code.</p>
 
-      <label for="tel"
-        >Phone
-        <input type="tel" id="tel" name="tel" autocomplete="tel" />
-      </label>
+      <form>
+        <div>
+          <label for="name">Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            autocomplete="name"
+            placeholder="John Doe"
+            required />
+        </div>
 
-      <label for="password"
-        >Password
-        <input
-          type="password"
-          id="password"
-          name="password"
-          autocomplete="new-password"
-          required />
-      </label>
+        <div>
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            autocomplete="email"
+            placeholder="john.doe@example.com"
+            required />
+        </div>
 
-      <label for="age"
-        >Age (18-100)
-        <input type="number" id="age" name="age" min="18" max="100" />
-      </label>
-
-      <label for="rating"
-        >Rating (0-10)
-        <input type="range" id="rating" name="rating" min="0" max="10" />
-      </label>
-
-      <label for="avatar"
-        >Profile Photo
-        <input type="file" id="avatar" name="avatar" accept="image/*" />
-      </label>
-
-      <label for="user-message"
-        >Message
-        <textarea
-          id="user-message"
-          name="message"
-          rows="5"
-          placeholder="Write your message here..."
-          required></textarea>
-      </label>
-
-      <button type="submit">Submit</button>
-      <!-- TODO: Add an input for the user's name -->
-      <!-- TODO: Add an input for the user's email using type="email" -->
-    </form>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
   </body>
 </html>
