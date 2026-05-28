@@ -4,10 +4,6 @@ const successEl2 = document.getElementById("success");
 
 if (form2) {
   form2.addEventListener("submit", async (e) => {
-    // TODO: prevent default, call fetch/login flow
-    // TODO: update errorEl2 or successEl2 depending on response
-    // On success, call form.reset() per the tasks
-    // 1. Clear previous messages to avoid mixed feedback
     errorEl2.textContent = "";
     successEl2.textContent = "";
 
@@ -26,7 +22,6 @@ if (form2) {
         },
       );
 
-      // 4. Handle response
       if (response.ok) {
         successEl2.textContent = "Login successful! Welcome back.";
         form2.reset(); // Clear form fields on success
