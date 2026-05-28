@@ -3,21 +3,44 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Level 09 — Challenge: Debug & Build (Unguided)</title>
+    <title>Level 08 — Practice: Debug & Build (Guided)</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <main>
-      <h1>Challenge: Fix the layout (unguided)</h1>
+      <h1>Practice: Fix the layout (guided)</h1>
       <p>
-        This challenge removes guided hints. Diagnose the cause of overflow and
-        fix spacing/overflow issues so items fit as intended.
+        This guided practice gives hints in the instructor-facing notes. Try
+        these steps:
       </p>
-      <div class="container" id="challenge">
+      <ol>
+        <li>
+          Compute total width of an <code>.item</code> (content + padding +
+          border + margin).
+        </li>
+        <li>
+          Try reducing the <code>.item</code> width or switch to
+          <code>box-sizing: border-box</code>.
+        </li>
+        <li>Verify both items fit without horizontal overflow.</li>
+      </ol>
+
+      <div class="container" id="practice">
         <div class="item">Item A</div>
         <div class="item">Item B</div>
       </div>
-      <!-- TODO: Fix spacing and overflow without instructor hints. -->
+
+      <section class="debug-notes">
+        <h2>Debugging Calculations</h2>
+        <p>
+          <strong>Total Width Math:</strong> By applying
+          <code>box-sizing: border-box</code>, the padding (24px total) and
+          border (4px total) are absorbed inside the 140px width structure.
+          Adding the outer 16px horizontal margin brings each element's
+          footprint down to 156px. Combined, both items sum up to 312px, which
+          sits safely inside the 320px container constraints.
+        </p>
+      </section>
     </main>
   </body>
 </html>
