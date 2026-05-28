@@ -5,10 +5,8 @@ const result = document.getElementById("result");
 form.onsubmit = handleSubmit;
 
 async function handleSubmit(event) {
-  event.preventDefault(); // Prevents the form from refreshing the page
-
-  try {
-    const response = await fetch(
+  event.preventDefault(); 
+  const response = await fetch(
       "https://jsonplaceholder.typicode.com/posts/1",
     );
     const data = await response.json();
@@ -16,5 +14,4 @@ async function handleSubmit(event) {
   } catch (error) {
     result.innerText = "There was an error fetching the data.";
   }
-}
-
+  }
