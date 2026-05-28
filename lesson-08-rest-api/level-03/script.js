@@ -6,21 +6,16 @@ form.onsubmit = handleSubmit;
 
 async function handleSubmit(event) {
   event.preventDefault();
- try {
+  try {
     // 1. Fetch the data using await
-    const response = await fetch('https://api.jsoning.com/mock/public/users');
-    
+    const response = await fetch("https://api.jsoning.com/mock/public/users");
+
     // 2. Parse the JSON response
     const data = await response.json();
-    
-    
+
     result.innerText = JSON.stringify(data, null, 2);
-    
   } catch (error) {
     result.innerText = "Error fetching data: " + error.message;
   }
 }
-  // TODO: use async/await to call fetch('https://api.jsoning.com/mock/public/users') and then set result.innerText
-}
-
-
+// TODO: use async/await to call fetch('https://api.jsoning.com/mock/public/users') and then set result.innerText
