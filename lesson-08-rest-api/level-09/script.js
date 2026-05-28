@@ -4,10 +4,7 @@ const form = document.getElementById("sample-form");
 const result = document.getElementById("result");
 // Example: result.innerText = 'GET is for reading; POST is for sending data.'
 async function handleSubmit(e) {
-  e.preventDefault();
-
-  // Collect values via form.elements
-  // form.elements is username, form.elements is email
+  event.preventDefault();
   const data = {
     username: form.elements.value,
     email: form.elements.value,
