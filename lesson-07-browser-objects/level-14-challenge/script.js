@@ -4,15 +4,16 @@ const operationalForm = document.querySelector("#sampleForm");
 
 operationalForm.onsubmit = function (event) {
   event.preventDefault();
+
   const form = event.target;
   const primaryValue = form.elements.primaryInput.value;
   const secondaryValue = form.elements.secondaryInput.value;
-  const responseOutput = document.querySelector("out");
+  const responseOutput = document.querySelector("#out");
 
   if (primaryValue === "admin" || secondaryValue === "clear") {
+    responseOutput.innerText = "Form cleared.";
     form.reset();
+  } else {
+    responseOutput.innerText = `Values: ${primaryValue}, ${secondaryValue}`;
   }
-
-  document.querySelector("out").innerText =
-    "Values: {primaryValue}, {secondaryValue}";
 };
