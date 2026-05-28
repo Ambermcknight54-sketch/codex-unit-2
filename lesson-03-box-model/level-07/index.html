@@ -9,11 +9,22 @@
   <body>
     <main>
       <h1>Box-sizing comparison</h1>
-      <div class="box" id="box-a">box A</div>
-      <div class="box" id="box-b" style="box-sizing: border-box">
-        box B (border-box)
-      </div>
-      <!-- TODO: Try adding global `*, *::before, *::after { box-sizing: border-box }` -->
+
+      <div class="box" id="box-a">Box A (content-box)</div>
+      <div class="box" id="box-b">Box B (border-box)</div>
+
+      <section class="explanation">
+        <h2>Global Reset Observation</h2>
+        <p>
+          <strong>Explanation:</strong> Under the default
+          <code>content-box</code> model (Box A), any padding or border values
+          you add expand the overall visual size of the box beyond its declared
+          width, which frequently breaks multi-column layouts. By globally
+          applying <code>border-box</code> (Box B), padding and borders are
+          calculated *inside* the declared width, making responsive layout
+          dimensions fully predictable.
+        </p>
+      </section>
     </main>
   </body>
 </html>
