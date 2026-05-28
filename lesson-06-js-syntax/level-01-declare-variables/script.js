@@ -5,5 +5,15 @@
 // let userName;
 
 // Add your lines below:
+let currentUserId;
+let userProfileName;
+let totalItemCount;
+let isSessionActive;
+let primaryThemeColor;
+let userEmailAddress;
+let maximumLoginAttempts;
+let accountCreationDate;
+let activeScreenIndex;
+let systemErrorMessage;
 
-let userName;
+export default currentUserId;
