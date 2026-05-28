@@ -5,14 +5,15 @@
 // let userName;
 
 // Add your lines below:
-const currentUserId = null;
-const userProfileName = "Guest";
-const totalItemCount = 0;
-const isSessionActive = false;
-const primaryThemeColor = "#ffffff";
-const userEmailAddress = "";
-const maximumLoginAttempts = 5;
-const accountCreationDate = "2026-01-01";
-const activeScreenIndex = 0;
-const systemErrorMessage = "None";
+let currentUserId;
+let userProfileName;
+let totalItemCount;
+let isSessionActive;
+let primaryThemeColor;
+let userEmailAddress;
+let maximumLoginAttempts;
+let accountCreationDate;
+let activeScreenIndex;
+let systemErrorMessage;
+
 export default currentUserId;
