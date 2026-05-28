@@ -29,5 +29,5 @@ body {
   margin: 8px;
   background-color: #deeaf6;
   text-align: center;
-  font-size: 16px; /* Restores the typography scaling size inside the item container */
+  font-size: 16px;
 }
