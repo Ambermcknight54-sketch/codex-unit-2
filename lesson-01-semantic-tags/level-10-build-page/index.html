@@ -3,39 +3,59 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Semantic page starter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Semantic Layout and Structure</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- TODO: Compose a short page using header, nav, main, sections, lists, images (with alt), and footer -->
-    <h1>Understanding Semantic HTML</h1>
+    <header>
+      <h1>Understanding Web Semantics</h1>
       <nav>
         <ul>
-          <li><a href="#about">About</a></li>
-
-          <li><a href="#benefits">Benefits</a></li>
+          <li><a href="#core-concepts">Core Concepts</a></li>
+          <li><a href="#benefits-list">Structure Benefits</a></li>
         </ul>
       </nav>
     </header>
 
     <main>
-      <section id="about">
-        <h2>What is Semantic HTML? it is plain lanquage used to describe the content </h2>
-        <p>Semantic HTML uses tags that describe the meaning of the content, rather than just its presentation.</p>
-        <img src="html-structure.jpg" alt="A diagram illustrating the hierarchy of semantic elements like header, main, and footer." />
+      <section id="core-concepts">
+        <h2>Semantic Foundations</h2>
+        <p>
+          Semantic HTML introduces meaning to the web page structure so that
+          browsers, search engines, and screen readers can inherently interpret
+          the layout hierarchy.
+        </p>
+        <img
+          src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=400&q=80"
+          alt="A structural wireframe drawing outlining content sections on a grid" />
       </section>
 
-      <section id="benefits">
-        <h2>Key Benefits</h2>
+      <section id="benefits-list">
+        <h2>Key Structural Elements</h2>
+        <p>
+          A compliant layout separates document roles into these core
+          components:
+        </p>
         <ul>
-          <li><strong>Accessibility:</strong> Assistive technologies can better navigate the page.</li>
-          <li><strong>SEO:</strong> Search engines understand the document structure more accurately.</li>
-          <li><strong>Maintainability:</strong> Clearer code makes updates easier for developers.</li>
+          <li>
+            Header: Hosts introductory text, main titles, and global navigation
+            links.
+          </li>
+          <li>
+            Main: Encapsulates the unique, central content specific to the page
+            view.
+          </li>
+          <li>
+            Footer: Contains copyright details, privacy policy nodes, and
+            secondary links.
+          </li>
         </ul>
       </section>
     </main>
 
     <footer>
-      <p> Semantic Learning </p>
+      <p>All rights reserved.</p>
     </footer>
   </body>
 </html>
