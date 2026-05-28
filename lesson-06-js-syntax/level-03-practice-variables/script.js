@@ -11,11 +11,11 @@ let country;
 
 let = "noName";
 
-let lastName "Smith";
+let lastName = "Smith";
 
-let city = "New York;
+let city = "New York";
 
-let country = ""USA"";
+let country = "USA";
 
 let planet = Earth;
 
