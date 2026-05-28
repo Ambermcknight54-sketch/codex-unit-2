@@ -1,1 +1,21 @@
 /* TODO: Inspect and override user-agent defaults like margins on headings and paragraphs */
+h1,
+p {
+  margin: 0;
+}
+
+body {
+  font-family: sans-serif;
+  padding: 24px;
+  background-color: #fafafa;
+  line-height: 1.6;
+}
+.explanation {
+  margin-top: 32px;
+  border-top: 1px solid #dddddd;
+  padding-top: 16px;
+}
+
+.explanation h2 {
+  margin-bottom: 8px;
+}
