@@ -7,13 +7,21 @@
 //   document.querySelector('#result').innerText = message;
 // }
 const messageForm = document.querySelector("#sample-form");
+messageForm.onsubmit = handleSubmit;
 
-const handleSubmit(event) {
+function handleSubmit(event) {
+  // Prevent the browser from clearing state / refreshing the page automatically
   event.preventDefault();
+
+  // Target the active form scope element instance safely
   const form = event.target;
+
+  // Extract the string value cleanly through the form.elements object cache tree
   const message = form.elements.message.value;
+
+  // Isolate the display target node container and render the value
   const outputDisplay = document.querySelector("#result");
   outputDisplay.innerText = message;
 }
 
-messageForm.onsubmit = handleSubmit;
+// Bind the submission lifecycle handler to the element instance node
