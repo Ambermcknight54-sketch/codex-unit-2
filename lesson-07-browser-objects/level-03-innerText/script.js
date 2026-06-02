@@ -10,7 +10,7 @@ console.log("before:", element.innerText);
 
 // 3. Set element.innerText to a new descriptive string that mentions 'innerText'
 element.innerText =
-  "The innerText property updates only the visible plain text content of an element and safely escapes any HTML tags.";
+  "The innerText property updates only the visible plain text content of an element.
 
 // 4. Use the debugger to inspect changes
 debugger;
