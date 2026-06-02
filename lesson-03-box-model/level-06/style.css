@@ -14,13 +14,15 @@ body {
 
 h1 {
   text-align: center;
-  margin-bottom: 24px;
+  margin-bottom: 32px;
 }
 
 /* Container to prevent inline elements from expanding wildly */
 .container {
   max-width: 960px;
   margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
 }
 
 /* LEVEL 06 TASK: Define a stable 2-column layout.
@@ -28,10 +30,10 @@ h1 {
   - total width math per column: 1% (margin-left) + 48% (width) + 1% (margin-right) = 50%
   - 50% * 2 columns = 100% total layout width, guaranteeing zero wrapping bugs.
 */
-.col {
+.col h2 {
   box-sizing: border-box;
   display: inline-block;
-  vertical-align: top; /* Prevents alignment issues if columns have different content heights */
+  vertical-align: top;
   width: 48%;
   margin: 1%;
   padding: 20px;
