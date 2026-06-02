@@ -1,15 +1,17 @@
 /* Guided practice — smaller steps and a hint path for students */
 .container {
   width: 320px;
-  border: 1px solid #ccc;
+  background-color: #e9ecef;
   padding: 8px;
+  border-radius: 6px;
+  /* Simple structural clearing for inline-block children */
+  font-size: 0;
 }
+
 .item {
+  box-sizing: border-box;
   display: inline-block;
-  width: 140px;
-  padding: 12px;
-  border: 2px solid #444;
-  margin: 8px;
+  vertical-align: top;
 }
 
 body {
