@@ -5,12 +5,14 @@
   padding: 8px;
 }
 
+/* Explicit Dimension Constraints */
 .item {
   display: inline-block;
-  width: 160px;
-  padding: 12px;
-  border: 2px solid #444;
-  margin: 8px;
+  width: 140px;
+  height: 80px;
+  margin: 0 8px; /* 8px Left + 8px Right = 16px horizontal margin */
+  padding: 12px; /* 12px Left + 12px Right = 24px horizontal padding */
+  border: 2px solid; /* 2px Left + 2px Right = 4px horizontal border */
 }
 
 body {
