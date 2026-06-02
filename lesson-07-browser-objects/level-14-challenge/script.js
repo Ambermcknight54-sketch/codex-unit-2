@@ -30,6 +30,3 @@ function handleSubmit(event) {
     form.reset();
   }
 }
-
-// 3. Attach handleSubmit to form.onsubmit
-sampleForm.onsubmit = handleSubmit;
