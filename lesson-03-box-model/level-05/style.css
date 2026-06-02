@@ -26,14 +26,20 @@ body {
   text-align: center;
 }
 
+/*The Block Element
+   - it automatically breaks onto a brand new line.
+   - You have total control over the width, height, and all padding sides.
+*/
+
 .demo-block {
+  /* IT COLLAPSES WHEN CHANHED TO INLINE */
+  background-color: #e2f0d9;
   display: block;
   margin-top: 16px;
   padding: 10px;
   background-color: #fce4d6;
   border: 2px solid #c65911;
 }
-
 .observation-box {
   margin-top: 32px;
   border-top: 1px solid #dddddd;
