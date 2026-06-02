@@ -9,3 +9,30 @@ body {
   padding: 20px;
   background-color: #fafafa;
 }
+
+.layer-margin {
+  background-color: #fcecd6;
+  padding: 50px;
+}
+
+.layer-border {
+  border: 15px double #d85a32;
+  background-color: #e2f0d9;
+}
+
+.layer-padding {
+  padding: 10px;
+}
+
+.layer-content {
+  background-color: #ddebf7;
+  border: 2px dashed #4472c4;
+  padding: 15px;
+  text-align: center;
+}
+
+.layer-content p {
+  margin: 0;
+  font-weight: bold;
+  color: #1f4e79;
+}
