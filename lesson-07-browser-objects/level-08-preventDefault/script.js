@@ -5,12 +5,11 @@
 //   console.log('preventDefault called');
 // }
 const form = document.querySelector("sample-form");
+form.onsubmit = handleSubmit;
 
 function handleSubmit(event) {
   event.preventDefault();
   console.log(
-    "preventDefault stops the default action of the submit event, allowing JavaScript to handle processing locally without resetting the current page state.",
+    "event.preventDefault() was called successfully. This stops the browser from reloading the page upon form submission.",
   );
 }
-
-form.onsubmit = handleSubmit;
