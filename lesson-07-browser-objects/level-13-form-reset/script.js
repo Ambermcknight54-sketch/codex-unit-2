@@ -9,22 +9,30 @@
 //
 // M ID
 const profileForm = document.querySelector("#sampleForm");
-profileForm.onsubmit = handleSubmit;
+const sampleForm = document.querySelector("#sample-form");
 
+// 2. Define the form submission event handler
 function handleSubmit(event) {
+  // 🛠️ TASK: Call preventDefault at handler start to stop the page from refreshing
   event.preventDefault();
+
+  // 🛠️ TASK: Save form via event.target
   const form = event.target;
+
+  // 🛠️ TASK: Read firstName and lastName string values from form.elements
   const firstName = form.elements.firstName.value;
   const lastName = form.elements.lastName.value;
-  if (firstName === "Ava" && lastName === "Mcknight") {
-    console.log("Validation approved. Clearing fields back to baseline state.");
-    debugger;
-    form.reset();
-  } else if (firstName === "Leo") {
-    console.log("Partial match detected for Leo. Clearing fields.");
-    debugger;
-    form.reset();
+
+  // 🛠️ TASK: Write if / else if statements to check values and call form.reset()
+  if (firstName === "Bob") {
+    console.log("Success: First name is Bob. Resetting form...");
+    form.reset(); // Clears all inputs back to their initial state
+  } else if (lastName === "Smith") {
+    console.log("Success: Last name is Smith. Resetting form...");
+    form.reset(); // Clears all inputs back to their initial state
   } else {
-    console.log("Validation unfulfilled. Maintaining entries for correction.");
+    console.log(
+      "Validation failed: No match for Bob or Smith. Form values retained.",
+    );
   }
 }
