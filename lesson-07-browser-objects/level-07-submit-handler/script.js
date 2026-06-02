@@ -5,12 +5,11 @@
 // function handleSubmit(event) { console.log('onsubmit handler'); }
 // form.onsubmit = handleSubmit;
 const form = document.getElementById("sample-form");
+form.onsubmit = handleSubmit;
 
 function handleSubmit(event) {
   event.preventDefault();
   console.log(
-    "onsubmit fires immediately when a user attempts to submit a form structure via buttons or entry events.",
+    "onsubmit fires immediately when a user attempts to submit a form by buttons or entry events.",
   );
 }
-
-form.onsubmit = handleSubmit;
