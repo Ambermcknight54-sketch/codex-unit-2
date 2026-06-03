@@ -1,5 +1,5 @@
 const sampleForm = document.querySelector("#sample-form");
-
+sampleForm.onsubmit = handleSubmit;
 // 2. Define the form submission event handler
 function handleSubmit(event) {
   // 🛠️ TASK: Call preventDefault at handler start to stop the page from refreshing
