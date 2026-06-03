@@ -13,30 +13,18 @@
       <p>Learning how to use VS Code.</p>
 
       <form>
-        <div>
-          <label for="name">Name</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            autocomplete="name"
-            placeholder="John Doe"
-            required />
-        </div>
+      <!-- Nested layout avoids needing separate ID and FOR attributes -->
+      <label>
+        Name
+        <input type="text" name="name" autocomplete="name" required />
+      </label>
 
-        <div>
-          <label for="email">Email</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            autocomplete="email"
-            placeholder="john.doe@example.com"
-            required />
-        </div>
+      <label>
+        Email
+        <input type="email" name="email" autocomplete="email" required />
+      </label>
 
-        <button type="submit">Submit</button>
-      </form>
-    </div>
+      <button type="submit">Submit</button>
+    </form>
   </body>
 </html>
