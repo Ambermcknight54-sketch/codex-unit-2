@@ -4,7 +4,7 @@
 //   event.preventDefault();
 //   console.log('preventDefault called');
 // }
-const form = document.querySelector("sample-form");
+const form = document.querySelector("#sample-form");
 form.onsubmit = handleSubmit;
 
 function handleSubmit(event) {
