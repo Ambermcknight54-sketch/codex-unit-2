@@ -46,10 +46,10 @@ Introduce the semantic HTML document skeleton and where content belongs.
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Your page title</title>
+    <title>VS CODE</title>
   </head>
   <body>
-    <h1>Your main heading</h1>
+    <h1>Learning to Code</h1>
     <!-- page content -->
   </body>
 </html>
