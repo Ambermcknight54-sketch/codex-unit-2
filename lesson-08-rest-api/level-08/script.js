@@ -4,7 +4,7 @@ const form = document.getElementById("sample-form");
 const result = document.getElementById("result");
 form.onsubmit = handleSubmit;
 
-async function handleSubmit(e) {
+async function handleSubmit(event) {
   event.preventDefault();
   const data = {
     username: form.elements.value,
