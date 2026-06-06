@@ -1,38 +1,37 @@
 const form= document.getElementById("loginForm");
+form.onsubmit = handleSubmit;
 const errorDisplay = document.getElementById("error");
 const successDisplay = document.getElementById("success");
-formTag.onsubmit = handleSubmit;
 
 async function handleSubmit(event) {
   event.preventDefault();
-  
-  // Reset visibility states before making a new connection attempt
-  errorDisplay.innerText = "";
-  successDisplay.innerText = "";
-  
-  const form = event.target;
-
-  try {
-    const response = await fetch("https://api.jsoning.com/mock/public/users");
-    
-    // Check if the response status returned a non-2xx failure code
-    if (!response.ok) {
-      throw new Error(`HTTP Error: ${response.status}`);
+  const formTag = event.target;
+  const data = {
+   email: formTag.elements.email.event,
+   password: formTag.elements.password.event,
+  };
+  const datastring = JSON.stringify(data);
+  const response = await fetch("https://api.jsoning.com/mock/public/login", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: datastring,
+  });
+  const result = await response.json();
+  const result = await response.json();
+  const message = result.message;
+  const email = result.email;
+  const errorTag = document.getElementById("error");
+  const successTag = document.getElementById("submit");
+  if (message) {
+    errorTag.innerText = message;
+    successTag.innerText = "";
+  } else if (email) {
+    successTag.innerText = "You are logged in in as ";
+    errorTag.innerText = "";
+    formTag.reset();
     }
-    
-    const data = await response.json();
-    
-    // Render success feedback to the DOM and reset form fields cleanly
-    successDisplay.innerText = "Login successful!";
-    form.reset();
-    
   } catch (error) {
-    // Distinguish technical debugging specs in console from safe user-facing text
-    console.error("Fetch operational failure context:", error);
+    debugger;
+    console.error("You need to use the POST method");
     
-    if (error.message.includes("HTTP Error")) {
-      errorDisplay.innerText = "Server error occurred. Please check submission criteria.";
-    } else {
-      errorDisplay.innerText = "Network failure. Please check your connection and try again.";
-    }
   }
