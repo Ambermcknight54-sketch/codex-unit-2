@@ -12,7 +12,7 @@ async function handleSubmit(event) {
     email: form.elements.value,
   };
     const settings = {
-      
+
     }
     const response = await fetch("https://api.jsoning.com/mock/public/users", {method: " POST", body}};
     const pTag =document.getElementById("result")
@@ -23,12 +23,5 @@ async function handleSubmit(event) {
     });
 
   
-  
-    if (response.ok) {
-      result.innerText =
-        "Success! We sent the data as a JSON string and set the 'Content-Type' to 'application/json' so the server understands it.";
-    } else {
-      result.innerText = `Error: Server responded with status ${response.status}`;
-    }
 }
 

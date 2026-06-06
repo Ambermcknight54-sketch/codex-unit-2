@@ -1,35 +1,32 @@
-const form2 = document.getElementById("login-form");
+const form = document.getElementById("login-form");
+form.onsubmit = handleSubmit;
 const errorEl2 = document.getElementById("error");
 const successEl2 = document.getElementById("success");
 
-if (form2) {
-  form2.addEventListener("submit", async (e) => {
-    errorEl2.textContent = "";
-    successEl2.textContent = "";
-
-    // 2. Build the data object
-    const formData = new FormData(e.target);
-    const data = Object.fromEntries(formData.entries());
-
-    try {
-      // 3. POST to the login endpoint
-      const response = await fetch(
-        "https://api.jsoning.com/mock/public/login",
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(data),
-        },
-      );
-
-      if (response.ok) {
-        successEl2.textContent = "Login successful! Welcome back.";
-        form2.reset(); // Clear form fields on success
-      } else {
-        errorEl2.textContent = "Login failed: Invalid email or password.";
-      }
-    } catch (err) {
-      errorEl2.textContent = "Network error: Unable to connect to the server.";
-    }
+async function handleSubmit(event) {
+  event.preventDefault();
+  const formTag = event.target;
+  const data = {
+    email: formTag.elements.email.event,
+    password: formTag.elements.password.event,
+  };
+  const datastring = JSON.stringify(data);
+  const response = await fetch("https://api.jsoning.com/mock/public/login", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: datastring,
   });
+  const result = await response.json();
+  const message = result.message;
+  const email = result.email;
+  const errorTag = document.getElementById("error");
+  const successTag = document.getElementById("submit");
+  if (message) {
+    errorTag.innerText = message;
+    successTag.innerText = "";
+  } else if (email) {
+    successTag.innerText = "You are logged in in as ";
+    errorTag.innerText = "";
+    formTag.reset();
+  }
 }

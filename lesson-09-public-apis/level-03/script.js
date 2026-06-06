@@ -1,4 +1,4 @@
-const formTag = document.getElementById("loginForm");
+const form= document.getElementById("loginForm");
 const errorDisplay = document.getElementById("error");
 const successDisplay = document.getElementById("success");
 formTag.onsubmit = handleSubmit;
