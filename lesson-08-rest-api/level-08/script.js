@@ -10,8 +10,6 @@ async function handleSubmit(event) {
     username: form.elements.value,
     email: form.elements.value,
   };
-
-  try {
     const response = await fetch("https://api.jsoning.com/mock/public/users", {
       method: "POST",
       headers: {
@@ -26,7 +24,9 @@ async function handleSubmit(event) {
     } else {
       result.innerText = `Error: Server responded with status ${response.status}`;
     }
-  } catch (error) {
+  } try (parameter) {
+
+  }
     result.innerText = "Fetch failed: " + error.message;
   }
-}
+
