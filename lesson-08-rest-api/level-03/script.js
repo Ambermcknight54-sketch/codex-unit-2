@@ -1,21 +1,13 @@
 // Level 03 starter script
 // TODO: Use async/await when calling fetch inside the submit handler.
 const form = document.getElementById("sample-form");
-const result = document.getElementById("result");
-form.onsubmit = handleSubmit;
 
 async function handleSubmit(event) {
   event.preventDefault();
-  try {
-    // 1. Fetch the data using await
-    const response = await fetch("https://api.jsoning.com/mock/public/users");
-
-    // 2. Parse the JSON response
-    const data = await response.json();
-
-    result.innerText = JSON.stringify(data, null, 2);
-  } catch (error) {
-    result.innerText = "Error fetching data: " + error.message;
-  }
+  // 2. Parse the JSON response
+  const response = await fetch("https://api.jsoning.com/mock/public/users");
+  const pTag = document.getElementById("result");
+  pTag.innerText = "async marks a function as asynchronous";
 }
+if (form) form.onsubmit = handleSubmit;
 // TODO: use async/await to call fetch('https://api.jsoning.com/mock/public/users') and then set result.innerText
