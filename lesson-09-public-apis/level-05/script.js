@@ -1,6 +1,15 @@
 const formTag = document.getElementById("queryForm");
 formTag.onsubmit = handleSubmit;
 
+function handleSubmit(event) {
+  event.preventDefault();
+  const form = event.target;
+  const category = form.elements.category.value;
+  const difficulty = form.elements.difficulty.value;
+  const data = { category, difficulty };
+}
+const queryString = new URLSearchParams(data);
+
 if (triviaForm) {
   triviaForm.addEventListener("submit", async (event) => {
     // Reset UI while loading

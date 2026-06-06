@@ -5,7 +5,7 @@ const successDisplay = document.getElementById("success");
 
 async function handleSubmit(event) {
   event.preventDefault();
-  const formTag = event.target;
+  const form = event.target;
   const data = {
    email: formTag.elements.email.event,
    password: formTag.elements.password.event,
