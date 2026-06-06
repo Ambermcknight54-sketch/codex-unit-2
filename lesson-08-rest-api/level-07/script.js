@@ -12,7 +12,7 @@ async function handleSubmit(event) {
   };
   const response = await fetch("https://api.jsoning.com/mock/public/users", {
     method: "POST",
-    body: data,
+    body: "datastring",
   });
 
   result.innerText =

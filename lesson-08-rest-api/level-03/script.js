@@ -10,5 +10,5 @@ async function handleSubmit(event) {
   const pTag = document.getElementById("result");
   pTag.innerText = "async marks a function as asynchronous";
 }
-if (form) form.onsubmit = handleSubmit;
+form.onsubmit = handleSubmit;
 // TODO: use async/await to call fetch('https://api.jsoning.com/mock/public/users') and then set result.innerText

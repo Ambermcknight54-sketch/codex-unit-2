@@ -16,12 +16,14 @@ async function handleSubmit(event) {
     }
     const response = await fetch("https://api.jsoning.com/mock/public/users", {method: " POST", body}};
     const pTag =document.getElementById("result")
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
+      method: "POST",
+       body; "datastring",
+       headers; {
+        "Content-Type"; "application/json",
+      }
+   
     });
 
   
-}
+
 

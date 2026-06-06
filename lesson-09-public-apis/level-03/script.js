@@ -26,7 +26,7 @@ async function handleSubmit(event) {
     errorTag.innerText = message;
     successTag.innerText = "";
   } else if (email) {
-    successTag.innerText = "You are logged in in as ";
+    successTag.innerText = "You are logged in in as" + email ;
     errorTag.innerText = "";
     formTag.reset();
     }
