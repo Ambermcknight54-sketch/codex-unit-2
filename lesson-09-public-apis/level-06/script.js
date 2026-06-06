@@ -30,4 +30,4 @@ formTag.onsubmit = async function (event) {
     console.error("Trivia data extraction breakdown:", error);
     questionHeading.innerText = "Failed to load trivia database questions.";
   }
-};
+}
