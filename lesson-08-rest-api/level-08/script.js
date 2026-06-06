@@ -6,27 +6,29 @@ form.onsubmit = handleSubmit;
 
 async function handleSubmit(event) {
   event.preventDefault();
+  const form = event.target;
   const data = {
     username: form.elements.value,
     email: form.elements.value,
   };
-    const response = await fetch("https://api.jsoning.com/mock/public/users", {
-      method: "POST",
+    const settings = {
+      
+    }
+    const response = await fetch("https://api.jsoning.com/mock/public/users", {method: " POST", body}};
+    const pTag =document.getElementById("result")
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(data),
     });
 
+  
+  
     if (response.ok) {
       result.innerText =
         "Success! We sent the data as a JSON string and set the 'Content-Type' to 'application/json' so the server understands it.";
     } else {
       result.innerText = `Error: Server responded with status ${response.status}`;
     }
-  } try (parameter) {
-
-  }
-    result.innerText = "Fetch failed: " + error.message;
-  }
+}
 
