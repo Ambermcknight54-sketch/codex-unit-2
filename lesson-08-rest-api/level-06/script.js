@@ -4,11 +4,14 @@ const form = document.getElementById("sample-form");
 const out = document.getElementById("data");
 form.onsubmit = handleSubmit;
 
-function handleSubmit(e) {
+function handleSubmit(event) {
   event.preventDefault();
-  const data = {
-    username: form.elements.value,
-    email: form.elements.value,
+  const form = event.target;
+  const data ={
+   username = form.elements.username.value,
+   email = form.elements.email.value,
+  
   };
-  out.innerText = JSON.stringify(data, null, 2);
+
+ const out = document.getElementById("data"),
 }
