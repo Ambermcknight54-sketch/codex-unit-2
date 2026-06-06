@@ -14,6 +14,6 @@ async function handleSubmit(event) {
   const result = await response.json();
   const question = result[0]?.question || "No question returned.";
   console.log(question);
-  const outTag = document.querySelector("output");
+  const outTag = document.querySelector("#out");
   outTag.innerHTML = "<h3>" + question + "</h3>";
 }

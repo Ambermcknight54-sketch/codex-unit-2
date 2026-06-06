@@ -22,6 +22,8 @@ async function handleSubmit(event) {
   );
 
   const result = await response.json();
-  result[0].question.text;
-  console.log(result);
+  const quesion = result[0].question.text;
+  console.log(quesion);
+  const outTag = document.querySelector("#out");
+  outTag.innerHTML = "<h3>" + question + "</h3>";
 }
