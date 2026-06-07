@@ -1,8 +1,8 @@
 // Level 07 starter script
 // TODO: Build a data object from form.elements and use fetch POST to https://api.jsoning.com/mock/public/users
-const form = document.getElementById("sample-form");
+const formTag = document.getElementById("sample-form");
 const result = document.getElementById("result");
-form.onsubmit = handleSubmit;
+formTag.onsubmit = handleSubmit;
 
 async function handleSubmit(event) {
   event.preventDefault();
