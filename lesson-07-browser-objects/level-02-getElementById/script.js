@@ -14,4 +14,4 @@ console.log("Element InnerHTML:", element.innerHTML);
 console.log("Element Attributes:", element.attributes);
 
 // 3. Use the debugger to inspect element
-debugger;
+	// debugger statement removed

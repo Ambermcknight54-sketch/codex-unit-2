@@ -31,7 +31,6 @@ async function handleSubmit(event) {
     formTag.reset();
     }
   } catch (error) {
-    debugger;
     console.error("You need to use the POST method");
     
   }

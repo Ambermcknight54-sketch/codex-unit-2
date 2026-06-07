@@ -11,4 +11,4 @@ element.innerHTML = `<strong>innerHTML vs innerText:</strong>
 <p>innerHTML parses strings as HTML markup, allowing you to add tags like strong or em. In contrast, innerText handles content strictly as plain, visible text and won't render any HTML tags.</p>`;
 
 // 4. Use the debugger to inspect the element
-debugger;
+

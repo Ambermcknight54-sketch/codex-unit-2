@@ -8,4 +8,4 @@ console.log(document.scripts);
 console.log(document.styleSheets);
 
 // Use the debugger to inspect objects
-debugger;
+

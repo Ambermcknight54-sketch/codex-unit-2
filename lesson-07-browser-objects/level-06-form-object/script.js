@@ -28,5 +28,4 @@ function handleSubmit(event) {
   /* 🛠️ TASK: Inspect form in the debugger
    This breakpoint pauses execution so you can open your browser DevTools (F12), 
    hover over the 'form' variable, and look at all its built-in properties live. */
-  debugger;
 }

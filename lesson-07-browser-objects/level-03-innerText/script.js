@@ -13,4 +13,3 @@ element.innerText =
   "The innerText property updates only the visible plain text content of an element.";
 
 // 4. Use the debugger to inspect changes
-debugger;

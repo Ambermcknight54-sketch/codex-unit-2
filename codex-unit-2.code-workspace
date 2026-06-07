@@ -28,6 +28,12 @@
         "request": "launch",
         "url": "http://127.0.0.1:3002/lesson-08-rest-api/level-06/index.html",
       },
+      {
+        "type": "chrome",
+        "name": "http://127.0.0.1:3002/lesson-09-public-apis/level-06/index.html",
+        "request": "launch",
+        "url": "http://127.0.0.1:3002/lesson-09-public-apis/level-06/index.html",
+      },
     ],
   },
 }

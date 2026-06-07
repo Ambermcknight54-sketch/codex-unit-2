@@ -1,33 +1,31 @@
 const formTag = document.getElementById("queryForm");
-
-formTag.onsubmit = async function (event) {
+formTag.onsubmit = handleSubmit;
+async function handleSubmit(event) {
   event.preventDefault();
-
-  const questionHeading = document.getElementById("questionPrompt");
-  const displayA = document.getElementById("choiceA");
-  const displayB = document.getElementById("choiceB");
-  const displayC = document.getElementById("choiceC");
-  const displayD = document.getElementById("choiceD");
-
-   {
-    const response = await fetch("https://the-trivia-api.com/v2/questions");
-    const result = await response.json();
-
-    
-    const question = result.question.text;
-    const correct = result.correctAnswer;
-    const incorrect1 = result.incorrectAnswers;
-    const incorrect2 = result.incorrectAnswers;
-    const incorrect3 = result.incorrectAnswers;
-
-    
-    questionHeading.innerText = question;
-    displayA.innerText = `A) ${correct}`;
-    displayB.innerText = `B) ${incorrect1}`;
-    displayC.innerText = `C) ${incorrect2}`;
-    displayD.innerText = `D) ${incorrect3}`;
-  } catch (error) {
-    console.error("Trivia data extraction breakdown:", error);
-    questionHeading.innerText = "Failed to load trivia database questions.";
-  }
+  const form = event.target;
+  const category = form.elements.category.value;
+  const difficulty = form.elements.difficulty.value;
 }
+const data = { category, difficulty };
+const queryString = new URLSearchParams(data);
+const response = await fetch(
+  "https://the-trivia-api.com/v2/questions?" + "?" + queryString,
+);
+const result = await response.json();
+const question = result[0].question.text;
+console.log(question);
+const choiceA = result[0].correctAnswer;
+const choiceB = result[0].incorrectAnswers[0];
+const choiceC = result[0].incorrectAnswers[1];
+const choiceD = result[0].incorrectAnswers[2];
+
+const questionTag = document.querySelector("#questions");
+const choiceTagA = document.querySelector("#choiceA");
+const choiceTagB = document.querySelector("#choiceB");
+const choiceTagC = document.querySelector("#choiceC");
+const choiceTagD = document.querySelector("#choiceD");
+questionTag.innerHTML = "<h3>" + question + "</h3>";
+choiceTagA.innerHTML = "<pre>A" + choiceA + "</pre>";
+choiceTagB.innerHTML = "<pre>B" + choiceB + "</pre>";
+choiceTagC.innerHTML = "<pre>C" + choiceC + "</pre>";
+choiceTagD.innerHTML = "<pre>D" + choiceD + "</pre>";

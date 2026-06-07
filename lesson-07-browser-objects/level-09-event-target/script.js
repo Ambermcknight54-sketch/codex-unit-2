@@ -22,5 +22,4 @@ function handleSubmit(event) {
   (console.log("Captured Data safely from event.target:"), userEmail);
 
   // Pause execution for inspector evaluation if DevTools (F12) are open
-  debugger;
 }
