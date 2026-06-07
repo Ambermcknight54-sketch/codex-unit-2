@@ -1,4 +1,4 @@
-const form= document.getElementById("loginForm");
+const form = document.getElementById("loginForm");
 form.onsubmit = handleSubmit;
 const errorDisplay = document.getElementById("error");
 const successDisplay = document.getElementById("success");
@@ -37,3 +37,4 @@ async function handleSubmit(event) {
   } catch (error) {
     console.error("You need to use the POST method", error);
   }
+}
