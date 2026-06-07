@@ -11,19 +11,14 @@ async function handleSubmit(event) {
     username: form.elements.value,
     email: form.elements.value,
   };
-    const settings = {
+  const pTag = document.getElementById("result");
+  const dataString = JSON.stringify({ name: "Alex" });
 
-    }
-    const response = await fetch("https://api.jsoning.com/mock/public/users", {method: " POST", body}};
-    const pTag =document.getElementById("result")
-      method: "POST",
-       body; "datastring",
-       headers; {
-        "Content-Type"; "application/json",
-      }
-   
-    
-
-  
-
-
+  const response = await fetch("https://api.jsoning.com/mock/public/users", {
+    method: "POST",
+    body: dataString,
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
+}
