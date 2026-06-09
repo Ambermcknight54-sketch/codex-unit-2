@@ -18,10 +18,10 @@ async function handleSubmit(event) {
   try {
     //  BUG FIX: Use safe bracket string lookups to prevent 'undefined' crashes
     const usernameValue = formTag.elements["username"]
-      ? formTag.elements["username"].value.trim()
+      ? formTag.elements["username"].value
       : "";
     const passwordValue = formTag.elements["password"]
-      ? formTag.elements["password"].value.trim()
+      ? formTag.elements["password"].value
       : "";
 
     // Basic Input Validation
