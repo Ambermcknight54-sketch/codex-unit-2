@@ -39,10 +39,10 @@ async function handleSubmit(event) {
       password: passwordValue,
     };
 
-    // 🟢 HANDLER REQUIREMENT MET: Convert object to a data string
+    // HANDLER REQUIREMENT MET: Convert object to a data string
     const dataString = JSON.stringify(data);
 
-    // 🟢 API REQUIREMENT MET: Fetch with async/await using an untaught public API
+    // API REQUIREMENT MET: Fetch with async/await using an untaught public API
     const response = await fetch("https://api.jsoning.com/mock/public/login", {
       method: "POST",
       headers: {
