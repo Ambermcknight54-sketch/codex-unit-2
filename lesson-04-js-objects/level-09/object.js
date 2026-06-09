@@ -6,13 +6,13 @@
 // export default user
 
 function greet(name) {
+
   return "Welcome" + name;
 }
 const user = {
   /* TODO: add name */
   name: "Ava",
 }
- greet: function() {
-    return greet(user.name);
-
-export default user;}
+ user.greet(user) = greet
+   
+export default (user);
