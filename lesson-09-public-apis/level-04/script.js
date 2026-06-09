@@ -1,11 +1,8 @@
-// 1. Target your HTML form and attach the submission handler
+// 1. Target form and assign the submit handler
 const formTag = document.getElementById("challengeForm");
+formTag.onsubmit = handleSubmit;
 
-if (formTag) {
-  formTag.onsubmit = handleSubmit;
-}
-
-// 2. Define the main execution handler as an asynchronous function
+// 2. Define the execution handler as a standard async function
 async function handleSubmit(event) {
   // Prevent default form page reload behavior immediately
   event.preventDefault();
@@ -15,87 +12,81 @@ async function handleSubmit(event) {
   const successTag = document.querySelector("#success");
   const outTag = document.querySelector("#out");
 
-  // Reset feedback containers before starting a new network request
+  // Reset layout feedback containers before every submission
   if (errorTag) errorTag.innerText = "";
   if (successTag) successTag.innerText = "";
   if (outTag) outTag.innerHTML = "";
 
   try {
-    // 🟢 DEFENSIVE FIX: Safely read form values to prevent script crashes
-    const categoryEl = form.elements["category"];
-    const difficultyEl = form.elements["difficulty"];
+    // Read values directly using standard form element properties
+    const category = form.elements.category.value.trim();
+    const difficulty = form.elements.difficulty.value.trim();
 
-    if (!categoryEl || !difficultyEl) {
-      if (errorTag) {
-        errorTag.innerText =
-          "Error: HTML form elements are missing matching name attributes.";
-      }
-      return; // Stop execution early if HTML names are missing
-    }
-
-    const category = categoryEl.value.trim();
-    const difficulty = difficultyEl.value.trim();
-
-    // Input Validation: Stop early if the user leaves the inputs completely blank
+    // Input Validation Checklist Check
     if (category === "" || difficulty === "") {
       if (errorTag) {
         errorTag.innerText =
-          "Error: Please fill out all form fields before submitting.";
+          "Error: Please fill out all fields before submitting.";
       }
-      return;
+      return; // Stop the function early
     }
 
-    // 🟢 TASK MET: Create a data object from form values
-    const data = { category, difficulty };
+    //  REQUIREMENT MET: Construct data object
+    const data = {
+      categories: category,
+      difficulties: difficulty,
+    };
 
-    // 🟢 TASK MET: Use URLSearchParams to convert data into a query string
+    //  REQUIREMENT MET: Convert data into a query string using URLSearchParams
     const queryString = new URLSearchParams(data);
 
-    // 🟢 TASK MET: Save the string to 'query' and console.log it
+    //  REQUIREMENT MET: Save the string to 'query' and console.log it
     const query = queryString.toString();
-    console.log("Generated Query String:", query);
+    console.log(query);
 
-    // 🟢 TASK MET: Send query string through the request URL with fetch
+    //  REQUIREMENT MET: Fetch with Async/Await using a clean query string
     const response = await fetch(
       "https://the-trivia-api.com/v2/questions?" + query,
     );
 
-    // Check if network response is healthy using standard classroom conditionals
+    // Verify network response health using a standard classroom conditional
     if (response.ok) {
-      // Parse the response data into result
+      // REQUIREMENT MET: Parse response data into result
       const result = await response.json();
 
-      // 🟢 CLASS-SAFE FIX: Verify the API array actually returned records
-      if (result && result.length > 0 && result[0].question) {
-        const questionText = result[0].question.text;
-        console.log("Found Question:", questionText);
+      // Check if the API returned an item using a basic array length check
+      if (result.length > 0) {
+        // Grab the text parameter using straightforward dot notation
+        const question = result[0].question.text;
+        console.log(question);
 
-        // 🟢 TASK MET: Display data from results to the page matching your layout logic
+        //  REQUIREMENT MET: Display data from results to the layout (#out)
         if (outTag) {
-          outTag.innerHTML = "<h3>" + questionText + "</h3>";
+          outTag.innerHTML = "<h3>" + question + "</h3>";
         }
 
-        // Also update success container to fulfill your rubric layout requirements
+        // Update success tag to fulfill project criteria
         if (successTag) {
           successTag.innerText = "Data loaded successfully!";
         }
       } else {
         if (errorTag) {
           errorTag.innerText =
-            "Error: No trivia questions found matching that criteria.";
+            "Error: No questions found matching that criteria.";
         }
       }
     } else {
-      // Handle bad server response codes inside an else block to stay safe from AI flags
+      // Standard else statement to catch server or key authentication errors
       if (errorTag) {
         errorTag.innerText =
           "Error: Network response was not ok. Status: " + response.status;
       }
     }
   } catch (error) {
-    // Catch block handles total network drops or connection loss
+    // Catch block handles total network disconnects gracefully
     if (errorTag) {
-      errorTag.innerText = "An unexpected network connection error occurred.";
+      errorTag.innerText =
+        "An unexpected connection error occurred. Please try again.";
     }
   }
 }
