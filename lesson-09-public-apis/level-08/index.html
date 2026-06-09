@@ -7,9 +7,20 @@
     <script src="script.js" defer></script>
   </head>
   <body>
-    <h1>Get a Joke</h1>
-    <form id="jokeForm">
-      <button type="submit">Get Meme</button>
+    <<main>
+      <h1>Get a Joke</h1>
+      
+      <form id="jokeForm">
+        <button type="submit">Get Meme</button>
+      </form>
+
+      <!-- Layout elements to properly display API feedback -->
+      <section>
+        <p id="error" aria-live="polite"></p>
+        <p id="success" aria-live="polite"></p>
+        <img id="memeDisplay" src="" alt="" style="max-width: 100%; height: auto;" />
+      </section>
+    </main>
     </form>
   </body>
 </html>
